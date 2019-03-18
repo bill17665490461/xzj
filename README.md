@@ -1,2 +1,1 @@
-# ukcms
-ukcms内容管理系统
+使用ukcms框架开发
