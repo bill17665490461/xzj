@@ -1,0 +1,102 @@
+{extend name="defaults/layout"/}
+{block name="content"}
+<!--城市分站-->
+<div class="headcity">
+
+
+
+
+  
+<!--顶部search end-->
+
+
+<!-- 工具 begin -->
+	 <!-- 
+<div class="newstool">
+	<div class="newstoolnr">
+         <div class="w98"><a href="/">首页</a></div>
+          <div class="td s1"><a href="/news/">热点新闻</a></div>
+		<div class="td "><a href="/shuju/">分析解读</a></div>
+		 <div class="td "><a href="/zsdt/">招商动态</a></div>
+		 
+	
+		 <div class="td "><a href="/zc/">政策速递</a></div>
+		 <div class="td "><a href="/kx/">投资快讯</a></div>
+		 <div class="td "><a href="/company/">公司动态</a></div>
+	
+	
+	</div>
+</div> -->
+
+<!-- 工具 end -->
+
+<!--第一屏内容开始-->
+<div class="news_list">
+<!--左侧列表开始-->
+     <div class="Ltcon">
+<!--面包屑begin-->
+   <div class="NSadd">
+    <a class="section" href="{:url('index/index')}"> 首页</a>&gt;
+                {volist name="crumbs" id="vo"}
+                <i class="right chevron icon divider"></i><a class="section" href="{$vo.url}"> {$vo.title}</a>&gt;
+                {/volist}
+    </div>
+<!--面包屑end-->
+
+		  <!--one con begin-->
+          {volist name="list.data" id="vo"}
+		  	<div class="list_con">
+		       <div class="list_tit">
+		       <a target="_blank" href="/index.php/cooperativeUnit/{$vo.id}">{$vo.title}</a></div>
+			   <div class="list_Introduction">　　{$vo.abstract}
+               [<a target="_blank" href="/index.php/cooperativeUnit/{$vo.id}">全文</a>]</div>
+			   <div class="list_time">{:date('Y-m-d H:i:s',$vo.create_time)}</div>
+		  </div>
+		   {/volist}
+		    
+		  <!--one con end-->
+
+
+
+
+<!--Pa_start-->
+<div id="LoadPageList">
+{$page|raw}
+
+</div>
+<!--Pa_end-->
+
+	 </div>
+<!--左侧列表结束-->
+<!--列表right begin-->
+<div class="Rtcon">
+<!--即时新闻begin-->
+<div class="inspright f_r">
+            <!--one end-->
+            
+        <div class="inspR_rank">
+            <h4 class="sdtit"><span><img src="__STATIC__/home/image/icon2.jpg"></span>最新招商峰会</h4>
+                
+            <ul class="inspRlink">
+                {uk:select table="articles" where ="status=1" field="id,title,cname" order="create_time desc" limit="0,12" }
+                <li onmouseover="this.style.backgroundColor=&#39;#f1f1f1&#39;" onmouseout="this.style.backgroundColor=&#39;#ffffff&#39;" style="background-color: rgb(255, 255, 255);">
+                    <a href="/index.php/cooperativeUnit/{$vo.id}">
+                    <span class="num top3" style="color: red">{$vo.id}</span>
+                    <span class="tit">{$vo.title}</span></a>
+                    
+                </li>
+                {/uk:select}
+                
+            </ul>
+            </div>
+                               
+    </div>
+
+
+<!--newstop10 end-->
+</div>
+<!--列表right end-->
+</div>
+
+
+{/block}

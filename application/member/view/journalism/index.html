@@ -1,0 +1,365 @@
+{extend name="layout"/}
+{block name="css"}
+<style>
+    
+</style>
+{/block}
+
+{block name="content"}
+
+<div class="panel">
+    <div class="panel-heading">
+        
+        <div class="panel-heading-controls">
+            {if $ExtModelId}<a class="btn btn-xs btn-primary" href="{:url('content/'.$columnName,['act'=>'page'])}"><i class="fa fa-plus"></i> 栏目拓展内容</a>{/if}
+            <a class="btn btn-xs btn-primary" href="{:url('add',['cname'=>$columnName])}"><i class="fa fa-plus"></i> 新增内容</a>
+        </div>
+    </div>
+    <div class="panel-body">
+        <form class="form-inline m-b-2 text-right" method="get">
+            <div class="form-group">
+                <label class="sr-only" for="form-inline-input-6">搜索关键字</label>
+                <input type="text" name="keyword" class="form-control" id="form-inline-input-6" value="{$Request.get.keyword}" placeholder="搜索关键字">
+            </div>
+            <button type="submit" class="btn btn-primary">搜索</button>
+        </form>
+
+        <form action="{:url('delete',['mid'=>$listModelId])}" method="post" id="doform">
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <tr>
+                        
+                    <th>ID</th>
+                    <th>标题</th>
+                    <th>发布人</th>
+                    <th width="60">点击量</th>
+                    <th width="160">更新时间</th>
+                    <th width="60">状态</th>
+                    <th width="100">操作</th>
+                    </tr>
+                   
+                    {volist name="list" id="vo"}
+                    <tr id="{$vo.id}">
+                        
+                        <td width="70">{$vo.id}</td>
+                        
+                        <td>{$vo.title}</td>
+                        <td>{$vo.nickname}</td>
+                        <td>{$vo.hits}</td>
+                        <td>{:date('Y-m-d H:i:s',$vo.update_time)}</td>
+                        <td>
+                            {if condition="$vo.status eq '1'"}
+                            <button  data-id="0" type="button" class="btn btn-sm btn-primary btn-rounded status">通过审批</button>
+                            {/if} 
+                            {if condition="$vo.status eq '0'"}
+                            <button  data-id="1"  type="button" class="btn btn-sm btn-default btn-rounded status">等待审批</button>
+                            {/if}
+                            {if condition="$vo.status eq '-1'"}
+                            <button  data-id="1"  type="button" class="btn btn-sm btn-default btn-rounded status">审批不通过</button>
+                            {/if}
+                        </td>
+                        <td>
+                        <a href="{:url('edit',['cname'=>$vo.cname,'id'=>$vo.id])}">
+                        <i  class="fa fa-edit btn  btn-sm btn-primary" data-toggle="tooltip" data-placement="top"  data-original-title="编辑"></i></a> 
+                        <i  class="fa fa-times btn  btn-sm btn-warning del" data-toggle="tooltip" data-placement="top"  data-original-title="删除" id="{$vo.id}"></i>
+                        </td>
+                    </tr>
+                    {/volist}
+                    
+                    {if $page}
+                    <tr>
+                        <td colspan="8" align="left" class="page-ul">
+                            {$page|raw}
+                        </td>
+                    </tr>
+                    {/if}
+                </table>
+            </div>
+        </form>
+    </div>
+</div>
+<script type="text/javascript" src="__STATIC__/jquery.min.js"></script>
+
+<script type="text/javascript">
+$('.del').click(function () {
+    var id = $(this).attr('id');
+    var nowdom = $(this).parent().parent();
+    
+    bootbox.confirm({
+        message: '确认删除吗？删除后不可恢复',
+        className: 'bootbox-sm',
+        callback: function (result) {
+
+            if (result) {
+                $.ajax({
+                    url: "{:url('member/journalism/del')}",
+                    type: "post",
+                    data: {
+                        id: id,del:'1'
+                    },
+                    dataType: 'text',
+                    success: function (data) {
+                        
+                        if (data) {
+                            
+                            nowdom.remove();
+                            toastr['success']('信息删除成功~', '', {
+                                closeButton: true
+                            });
+                        } else {
+
+                            toastr['warning'](data, '', {
+                                closeButton: true
+                            });
+                        }
+                    }
+                });
+            }
+        }
+    });
+});
+
+</script>
+{/block}
+
+{block name="javascript"}
+
+<script>
+
+
+    /*var modelId = '{$listModelId}';
+    var ColumnContentNode = new Object();
+    function CheckAll(form) {
+        for (var i = 0; i < form.elements.length; i++) {
+            var e = form.elements[i];
+            if (e.Name !== "chkAll" && e.disabled !== true)
+                e.checked = form.chkAll.checked;
+        }
+    }
+    function delEvevt() {
+        $('#doform').attr('action', "{:url('delete',['mid'=>$listModelId])}");
+        $('#subform').unbind();
+        $('#subform').click(function () {
+            bootbox.confirm({
+                message: '删除后不可恢复~确定要执行吗？',
+                className: 'bootbox-sm',
+                callback: function (result) {
+                    if (result) {
+                        $('#doform').submit();
+                    }
+                }
+            });
+        });
+        $('#num').hide();
+        $('#moveColumn').hide();
+    }*/
+   /* function moveEvevt() {
+        $('#doform').attr('action', "{:url('move',['mid'=>$listModelId])}");
+        $('#subform').unbind();
+        $('#subform').click(function () {
+            bootbox.confirm({
+                message: '移动栏目后不可恢复~确定要执行吗？',
+                className: 'bootbox-sm',
+                callback: function (result) {
+                    if (result) {
+                        $('#doform').submit();
+                    }
+                }
+            });
+        });
+        $('#num').hide();
+        $('#moveColumn').show();
+    }*/
+    /*function copyEvevt() {
+        $('#doform').attr('action', "{:url('copy',['mid'=>$listModelId])}");
+        $('#subform').unbind();
+        $('#subform').click(function () {
+            bootbox.confirm({
+                message: '复制会在数据库中重复生成信息~确定要执行吗？',
+                className: 'bootbox-sm',
+                callback: function (result) {
+                    if (result) {
+                        $('#doform').submit();
+                    }
+                }
+            });
+        });
+        $('#moveColumn').show();
+        $('#num').show();
+    }
+
+    function findColumnContentNode(menuNode) {
+        for (var i in menuNode) {
+            if (57==menuNode[i].id) {
+                ColumnContentNode = menuNode[i].cnode;
+                return;
+            }
+            if(menuNode[i].cnode !== undefined){
+                findColumnContentNode(menuNode[i].cnode);
+            }
+        }
+    }
+
+    function MoveColumnOption(ColumnContentNode,num) {
+        var deepNum=num?num:0;
+        var columnOption = '';
+        for (var i in ColumnContentNode) {
+            if(ColumnContentNode[i].ifvisible && ColumnContentNode[i].url_value){
+                var urlArr=ColumnContentNode[i].url_value.split("/");
+                var deepStr=new String("┝┈┈").repeat(deepNum);
+                if('admin'==urlArr[0] && 'content'==urlArr[1]){
+                    columnOption+='<option value="'+urlArr[2]+'">'+deepStr+ColumnContentNode[i].title+'</option>';
+                }
+            }
+            if(ColumnContentNode[i].cnode !== undefined){
+                columnOption+=MoveColumnOption(ColumnContentNode[i].cnode,deepNum+1);
+            }
+        }
+        return columnOption;
+    }
+
+    $(function () {
+        //设置移动栏目选项
+        findColumnContentNode(menu);
+        var optionContent=MoveColumnOption(ColumnContentNode);
+        $('#moveColumn').html(optionContent);
+
+        $('[data-toggle="tooltip"]').tooltip();
+        delEvevt();
+        $('#dotype').change(function () {
+            if ('delete' === $(this).val()) {
+                delEvevt();
+            } else if ('move' === $(this).val()) {
+                moveEvevt();
+            } else if ('copy' === $(this).val()) {
+                copyEvevt();
+            }
+        });
+        //排序
+        $('.editable-table').each(function () {
+            $(this).editableTableWidget({
+                editor: $('<input class="form-control">')
+            });
+        });
+        //定位标签隐显
+        $('#locat').click(function () {
+            if (0 == $(this).attr('data-state')) {
+                $(".fa-bookmark-o").tooltip('show');
+                $(this).attr('data-state','1');
+                $(this).addClass('btn-primary');
+                $(this).removeClass('btn-default');
+            }else{
+                $(".fa-bookmark-o").tooltip('hide');
+                $(this).attr('data-state','0');
+                $(this).addClass('btn-default');
+                $(this).removeClass('btn-primary');
+            }
+        });
+        $('.editable-table td').on('change', function (evt, newValue) {
+            var id = $(this).parent().parent().parent().parent().parent().attr('id');
+            var ifchange = false;
+            $.ajax({
+                async: false,
+                url: "{:url('changeorder')}",
+                type: "GET",
+                data: {
+                    mid: modelId,
+                    id: id,
+                    num: newValue
+                },
+                dataType: 'text',
+                success: function (data) {
+                    if (data === 'true') {
+                        ifchange = true;
+                        // alert(ifchange);
+                    } else {
+                        toastr['warning'](data, '', {
+                            closeButton: true
+                        });
+                    }
+                }
+            });
+            return ifchange;
+        });
+        $('#del').click(function () {
+            alert(1)
+            bootbox.confirm({
+                message: '确认删除吗？删除后不可恢复',
+                className: 'bootbox-sm',
+                callback: function (result) {
+                    if (result) {
+                        $('#tabledeal').submit();
+                    }
+                }
+            });
+        });
+        $('.status').click(function () {
+            var nowdom = $(this);
+            var id = nowdom.parent().parent().attr('id');
+            var status = nowdom.attr('data-id');
+            $.ajax({
+                url: "{:url('setstate')}",
+                type: "GET",
+                data: {
+                    mid: modelId,
+                    id: id,
+                    status: status
+                },
+                dataType: 'text',
+                success: function (data) {
+                    if (data === 'true') {
+                        if (status == 1) {
+                            nowdom.addClass('btn-primary');
+                            nowdom.attr('data-id', '0');
+                            nowdom.html('启用');
+                        }
+                        if (status == 0) {
+                            nowdom.removeClass('btn-primary');
+                            nowdom.attr('data-id', '1');
+                            nowdom.html('禁用');
+                        }
+                    } else {
+                        toastr['warning'](data, '', {
+                            closeButton: true
+                        });
+                    }
+                }
+            });
+        });
+
+        $('.del').click(function () {
+            var nowdom = $(this).parent().parent();
+            bootbox.confirm({
+                message: '确认删除吗？删除后不可恢复',
+                className: 'bootbox-sm',
+                callback: function (result) {
+                    if (result) {
+                        var id = nowdom.attr('id');
+                        $.ajax({
+                            url: "{:url('delete')}",
+                            type: "GET",
+                            data: {
+                                mid: modelId,
+                                id: id
+                            },
+                            dataType: 'text',
+                            success: function (data) {
+                                if (data === 'true') {
+                                    nowdom.remove();
+                                    toastr['success']('信息删除成功~', '', {
+                                        closeButton: true
+                                    });
+                                } else {
+                                    toastr['warning'](data, '', {
+                                        closeButton: true
+                                    });
+                                }
+                            }
+                        });
+                    }
+                }
+            });
+        });
+    });*/
+</script>
+{/block}

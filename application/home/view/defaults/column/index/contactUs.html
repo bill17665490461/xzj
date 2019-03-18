@@ -1,0 +1,98 @@
+{extend name="defaults/layout"/}
+{block name="content"}
+	<!--导航栏-->
+	<style type="text/css">
+		   .layui-tab-content img{width: auto;margin: 0 auto}
+	</style>
+
+	<div style="clear: both;"></div>
+	<!--内容-->
+	<div class="bg">
+
+	<div class="neirong">
+		<div class="left-wz">
+		<div class="yidong">
+		<h2>公司信息</h2>
+		{:htmlspecialchars_decode($getInfo.content)}
+		</div>	
+		</div>
+		<div class="right-tp">
+			<img src="__UPLOAD__/{$getInfo.img}">
+		</div>
+		</div>
+
+		<div class="neirong-1">
+			<div class="layui-tab">
+				<ul class="layui-tab-title">
+			    	<li class="layui-this">公司简介</li>
+			    	<li>留言信息</li>
+			  	</ul>
+			  	<div class="layui-tab-content">
+				    <div class="layui-tab-item layui-show" style="padding: 10px 30px 30px 30px">
+				    	{:htmlspecialchars_decode($getInfo.briefintroduction)}
+				    </div>
+				    <div class="layui-tab-item">
+						<div class="left-regiter">
+						       <p>&nbsp;</p>
+						       <p>&nbsp;</p>
+						       <p>&nbsp;</p>
+						       <p>&nbsp;</p>
+						    <form class="layui-form"  method="post" action="{:url('/contactus',['contactus'=>1])}">
+						    	<div class="layui-form-item">
+								<label class="layui-form-label">留言标题：</label>
+									<div class="layui-input-block">
+										<input type="text" name="title" placeholder="请输入" required="required" autocomplete="off" class="layui-input" style="width: 80%" />
+									</div>
+								</div>
+						    	<div class="layui-form-item">
+								<label class="layui-form-label">咨询人单位：</label>
+									<div class="layui-input-block">
+										<input type="text" name="company" placeholder="请输入" autocomplete="off" class="layui-input" style="width: 80%">
+									</div>
+								</div>
+								<div class="layui-form-item">
+								<label class="layui-form-label">咨询人姓名：</label>
+									<div class="layui-input-block">
+										<input type="text" name="name" placeholder="请输入" autocomplete="off" class="layui-input" style="width: 80%">
+									</div>
+								</div>
+								<div class="layui-form-item">
+								<label class="layui-form-label">联系手机号：</label>
+									<div class="layui-input-block">
+										<input type="number" name="telephone" placeholder="请输入" autocomplete="off" class="layui-input" style="width: 80%">
+									</div>
+								</div>
+								<div class="layui-form-item">
+								<label class="layui-form-label">E-mail</label>
+									<div class="layui-input-block">
+										<input type="email" name="email" placeholder="请输入" autocomplete="off" class="layui-input" style="width: 80%">
+									</div>
+								</div>
+								<div class="layui-form-item">
+								<label class="layui-form-label">QQ号码：</label>
+									<div class="layui-input-block">
+										<input type="text" name="qq" placeholder="请输入" autocomplete="off" class="layui-input" style="width: 80%">
+									</div>
+								</div>
+								<div class="layui-form-item layui-form-text">
+								    <label class="layui-form-label">留言内容：</label>
+								    <div class="layui-input-block">
+								      <textarea placeholder="请输入内容" required="required" name="content" class="layui-textarea"  style="width: 80%"></textarea>
+								    </div>
+								 </div>
+								<div class="layui-form-item" style="text-align: center">
+								    <div class="layui-input-block" style="margin-left: 0px">
+								      <button class="layui-btn layui-btn-submit" lay-submit lay-filter="*">发布留言</button>
+								      <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+								    </div>
+								 </div>
+						    </form>
+						 </div>
+				    </div>
+				</div>
+			</div>
+		
+        </div>	
+	</div>
+
+{/block}

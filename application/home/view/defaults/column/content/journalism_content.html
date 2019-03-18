@@ -1,0 +1,133 @@
+{extend name="defaults/layout"/}
+{block name="content"}
+<!--end
+<div class="area blank10"></div>-->
+<!--城市分站-->
+<!--城市分站-->
+<div class="headcity">
+
+
+   
+<!--顶部search end-->
+
+
+<div class="area blank10"></div>
+<!--第一屏内容开始-->
+<div class="news_list">
+<!-- Indus title begin -->
+<div id="top_title">
+	
+    	
+	<a class="section" href="{:url('index/index')}"> 首页</a>&gt;
+	{volist name="crumbs" id="vo"}
+	<a class="section" href="{$vo.url}"> {$vo.title}</a>&gt; 
+	{/volist}
+</div>
+<!-- Indus title end -->
+<div class="clear"></div>
+<!--左侧列表开始-->
+     <div class="inspleft f_l">
+	 <div class="con_tainer">
+<!--title begin-->
+	     <div class="news_tit"><h1>{$data.title}</h1></div>
+<!--title end-->
+<!--author begin-->
+         <div class="news_top"><span class="f_l">发布时间：{:date('Y-m-d H:i:s',$data.create_time)}</span><span class="f_r">来源：{$title}</span></div>
+<!--ahthor begin-->
+	<div class="news_main">
+<!--abstract begin-->
+		 <div class="news_abstract"><strong>【摘要】</strong>　　{$data.abstract}</div>
+<!--abstract end-->
+<!--newscontent begin-->
+<br>
+		
+	<div class="news_body" deep="5">
+	{:htmlspecialchars_decode($data.content)}
+	</div>
+<!--newscontent end-->
+
+	</div>
+<!--page begin-->
+<div class="pagebox">
+   
+    <div class="pagenext"><strong>上一篇：</strong> {empty name="prev"}没有了 ...{else}<a href="{$prev.url}">{$prev.title}</a>{/empty}</div>
+	
+    <div class="pagenext"><strong>下一篇：</strong>{empty name="next"}没有了 ...{else}<a href="{$next.url}">{$next.title}</a>{/empty}</div>
+	
+    <div class="pagelink">
+        <!-- Baidu Button BEGIN -->
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=753413" src="__STATIC__/home/js/bds_s_v2.js"></script>
+
+<script type="text/javascript">
+	document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + new Date().getHours();
+</script>
+<!-- Baidu Button END -->
+    </div>
+</div>
+<!--page end-->
+<!--pic_link_start-->
+
+<!--pic_link_end-->
+	 </div>
+<!--特别推荐 begin
+
+
+<!--特别推荐 end-->
+	</div>
+<!--左侧列表结束-->
+<!--列表right begin-->
+<!--右侧 begain-->
+<div class="inspright f_r">
+	<!--one end-->
+    <div class="inspR_rank">
+	
+    	<h4 class="sdtit"><span><img src="__STATIC__/home/image/rmtzxm.jpg"></span>最新招商峰会</h4>
+                
+        <ul class="inspRlink">
+        	{uk:select table="articles" where ="status=1" field="id,cname,title,logo,starttime,endtime,hits" order="create_time desc" limit="0,12" place="1" cid="30"}
+			<li onmouseover="this.style.backgroundColor=&#39;#f1f1f1&#39;" onmouseout="this.style.backgroundColor=&#39;#ffffff&#39;" style="background-color: rgb(255, 255, 255);">
+			
+			<a href="/index.php/articles/{$vo.id}" title="{$vo.title}" target="_blank">
+			<span class="num top3" style="color: red">{$vo.id}</span><span class="tit">{$vo.title}</span><span style="float: right;padding-right: 10px;">{$vo.hits}</span>
+			</a>
+			</li>
+		    {/uk:select}
+        </ul>
+    </div>
+    <!--one end-->
+		<div class="area2 blank10"></div>
+	    <div class="area2 blank10"></div>
+	    <div class="area2 blank10"></div>
+
+		    <!--广告位-->
+
+    <!--广告位-->
+    <div class="area2 blank10"></div>
+    <!--one begin-->
+    <div class="inspR_rank">
+        <h4 class="sdtit"><span><img src="__STATIC__/home/image/icon2.jpg"></span>热点新闻</h4>
+        
+        <ul class="inspRlink">
+        	{uk:select table="journalism" where ="status=1" field="id,cname,title,logo,hits" order="hits desc" limit="12" cid="17"}
+			<li onmouseover="this.style.backgroundColor=&#39;#f1f1f1&#39;" onmouseout="this.style.backgroundColor=&#39;#ffffff&#39;" style="background-color: rgb(255, 255, 255);">
+            <a href="/index.php/journalism/{$vo.id}" target="_blank">
+            	<span class="num top3" style="color: red">{$vo.id}</span>
+            	<span class="tit">{$vo.title}</span>
+            	<span style="float: right;padding-right: 10px;">{$vo.hits}</span>
+            </a>
+            </li>
+            {/uk:select}
+              
+        
+        </ul> 
+    </div>
+    <!--one end-->
+</div>
+<!--右侧 end-->
+<!--列表right end-->
+<div class="clear"></div>
+</div>
+
+
+{/block}

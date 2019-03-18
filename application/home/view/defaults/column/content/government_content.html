@@ -1,0 +1,164 @@
+{extend name="defaults/layout"/}
+{block name="content"}
+<!--城市分站-->
+<div class="headcity">
+
+
+
+
+   
+<div class="xqbox">
+<!-- Indus title begin -->
+<div id="top_title">
+
+<a class="section" href="{:url('index/index')}"> 首页</a>&gt;
+    {volist name="crumbs" id="vo"}
+    <a class="section" href="{$vo.url}"> {$vo.title}</a>&gt; 
+    {/volist}
+
+    
+</div>
+<!-- Indus title end -->
+<!--main内容 begin-->
+<div class="Indusonecon">
+<!--xq left-begin-->
+<div class="xq_left f_l">
+	<!--第一部分头部 begin-->
+	<div class="xq_info_main">
+	<!--Indus推荐图begin-->
+       <div class="recomparkimg">
+	   <!-- 代码 开始 -->
+
+    <div class="focusbox">         
+        <div class="focusimg" style="width: 430px;height: 380px">
+        	
+        	<img src="__UPLOAD__/{$data.logo.path}" alt="{$data.title}" style="width: 98%;height: 98%">
+        	
+      	</div>
+
+    </div>
+<script type="text/javascript">
+    jQuery.noConflict();
+	jQuery(document).ready(function($){
+		
+		$(".ftoollist li").mouseover(function(){
+			$(this).siblings().removeClass("on");
+			$(this).addClass("on");
+			var preNumber=$(this).prevAll().size();
+			$(".fimglist li").removeClass("onpre");
+			$(".fimglist li:nth-child("+preNumber+")").addClass("onpre");
+			var margin = 453;
+			margin = margin *preNumber; 
+			margin = margin * -1;
+			$(".fimglist").stop().animate({marginLeft: margin + "px"}, {duration: 500});
+		});
+	});
+</script>
+<!-- 代码 结束 -->
+	   </div>
+<!--Indus推荐图end-->	
+<!--推荐图右侧详情 begin-->
+<div class="xqL_info f_r">
+
+  <div class="rank_title">{$data.title}</div>
+  <div class="rank_p"><span class="padR-10">区域面积：</span>{$data.area}平方千米
+   </div>
+   <div class="rank_p"><span class="padR-10">联系部门：</span>{$data.department }</div>
+   <div class="rank_p"><span class="padR-10">投资规模：</span>{$data.scale}万</div>
+    <div class="rank_p"><span class="padR-10">常住人口：</span>{$data.population}万</div>
+    
+    <div class="rank_p"><span class="padR-10">基础设施：</span>{$data.infrastructure}</div>
+    
+  <div class="rank_p"><span class="padR-10">招商地址：</span>{:area($data.province)}>{:area($data.city)}>{:area($data.district)}>{$data.address}</div>
+  <div class="rank_p"><span class="padR-10">联系方式：</span><span class="fc_r20">{$data.contact}</span></div>
+
+
+</div>
+<!--推荐图右侧详情 end-->
+<div class="clear"></div>
+	</div>
+    <!--第一部分头部 end-->
+
+    <!--industrial info begin-->
+   <div class="Indus_info">
+<!--项目介绍begin-->
+      <div class="layui-tab">
+  <ul class="layui-tab-title">
+    <li class="layui-this">概况</li>
+    <li>地区优势</li>
+    <li>城市化建设</li>
+    <li>地方土特产</li>
+    <li>招商资源</li>
+    <li>招商政策</li>
+  </ul>
+  <div class="layui-tab-content" style="border-left: 1px solid #eee;border-bottom: 1px solid #eee;border-right: 1px solid #eee;">
+    <div class="layui-tab-item layui-show">
+      {:htmlspecialchars_decode($data.survey)}
+    </div>
+    <div class="layui-tab-item">{:htmlspecialchars_decode($data.region)}</div>
+    <div class="layui-tab-item">{:htmlspecialchars_decode($data.town)}</div>
+    <div class="layui-tab-item">{:htmlspecialchars_decode($data.specialty)}</div>
+    <div class="layui-tab-item">{:htmlspecialchars_decode($data.policy)}</div>
+    
+  </div>
+</div>
+<!--项目介绍end-->
+   </div>
+
+</div>
+<!--xq left-end-->
+<!--右侧 begain-->
+        <div class="inspright f_r">
+        	<!--one end-->
+        	
+						<div class="inspR_rank">
+            	<h4 class="sdtit"><span><img src="__STATIC__/home/image/icon2.jpg"></span>
+            	<span class="more"><a href="/index.php/government">更多&gt;&gt;</a></span>最新招商信息</h4>
+                
+              <ul class="inspRlink">
+			           {uk:select table="government" where ="status=1" field="id,title,cname" order="create_time desc" limit="0,12" cid="20"}
+			   					 <li onmouseover="this.style.backgroundColor=&#39;#f1f1f1&#39;" onmouseout="this.style.backgroundColor=&#39;#ffffff&#39;" style="background-color: rgb(255, 255, 255);">
+			   			       <a href="/index.php/government/{$vo.id}">
+                    <span class="num top3" style="color: red">{$vo.id}</span>
+                    <span class="tit">{$vo.title}</span></a>
+                  	
+                  	</li>
+               	{/uk:select}
+			    
+				      </ul>
+            </div>
+						
+            <!--one end-->
+            <div class="area2 blank10"></div>
+        	<!--one begin-->
+        	<div class="inspR_rank">
+            	<h4 class="sdtit"><span><img src="__STATIC__/home/image/icon1.jpg"></span>
+            	<span class="more"><a href="/index.php/government">更多&gt;&gt;</a></span>热点政府招商信息</h4>
+                
+                <ul class="inspRlink">
+                 	{uk:select table="government" where ="status=1" field="id,title,cname" order="hits desc" limit="0,12" cid="20"}
+                   <li onmouseover="this.style.backgroundColor=&#39;#f1f1f1&#39;" onmouseout="this.style.backgroundColor=&#39;#ffffff&#39;" style="background-color: rgb(255, 255, 255);">
+                     <a href="/index.php/government/{$vo.id}">
+                    <span class="num top3" style="color: red">{$vo.id}</span>
+                    <span class="tit">{$vo.title}</span></a>
+                    
+                    </li>
+                  {/uk:select}
+				        </ul> 
+            </div>
+            <!--one end-->
+            <div class="area2 blank10"></div>
+        	<!--one begin-->
+        	
+           	 
+          			
+		         </div>
+        <!--右侧 end-->
+<div class="clear"></div>
+</div>
+<!--main内容 end-->
+<div class="area blank10"></div>
+
+</div>
+
+{/block}

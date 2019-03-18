@@ -1,0 +1,25 @@
+{extend name="layout"/}
+{block name="content"}
+<div class="panel">
+    <div class="panel-heading">
+        <div class="panel-title">添加【{$columnTitle}】下的内容</div>
+    </div>
+    <form class="panel-body" method="post" action="{:url('add',['mid'=>$mid,'cname'=>$cname])}">
+        {include file="inputItem"  /}
+        {if  isset($placeList) && !empty($placeList)}
+        <fieldset class="form-group">
+            <label  style="clear:both; display: block">推荐位</label>
+            {volist name="$placeList" id="vo"}
+            <label class="custom-control custom-checkbox checkbox-inline">
+                <input type="checkbox" name="modelField[places][]" class="custom-control-input" value="{$key}">
+                <span class="custom-control-indicator"></span>{$vo}
+            </label>
+            {/volist}
+        </fieldset>
+        {/if}
+        <div class="panel-footer text-right">
+            <input type="submit" class="btn btn-primary" value="确认添加">
+        </div>
+    </form>
+</div>
+{/block}

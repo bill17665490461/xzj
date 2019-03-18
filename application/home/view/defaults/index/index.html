@@ -1,0 +1,241 @@
+{extend name="defaults/layout"/}
+{block name="content"}
+<!--城市分站-->
+<!--城市分站-->
+<div class="headcity">
+<!--头条结束-->
+<script type="text/javascript">
+	$(document).ready(function() {
+		$.featureList(
+			$("#feature_tabs li"),
+			$("#feature_output li"), {
+				start_item : 0,
+				transition_interval: 5000
+			}
+		);
+	});
+</script>
+<!--第一屏内容开始-->
+<div class="Prak First1">
+     <div class="CFCK22">
+	<div class="CFnewstit" style="margin-top:6px;">
+		<div class="CFTIT">招商峰会</div>
+		<div class="Cmore"></div>
+		<div class="CFmall"><a href="/index.php/articles" target="_blank">更多</a></div>
+	</div>
+	<div class="CF_jdshow">
+	<script type="text/javascript" src="__STATIC__/home/js/lrtk22.js"></script>
+<!-- 焦点图代码开始 -->
+<div id="zSlider">
+	<div id="picshow">
+		<div id="picshow_img">
+			<ul>
+			   		
+			  
+			{uk:select table="articles" where ="status=1" field="id,cname,title,logo" order="orders asc" limit="12" place="1" cid="30"}
+			  <li style="display: none;">
+			  <a href="/index.php/articles/{$vo.id}">
+			  <img src="__UPLOAD__/{$vo.logo.path}" alt="{$vo.title}"></a></li>
+			  {/uk:select}
+			</ul>
+		</div>
+		<div id="picshow_tx">
+
+			<ul>
+			   	{uk:select table="articles" where ="status=1" field="id,cname,title,logo,starttime,endtime,address" order="orders asc" limit="0,12" place="1" cid="30"}
+				<li style="display: none;">
+					<h3><a href="/index.php/articles/{$vo.id}" title="{$vo.title}">{$vo.title}</a></h3>
+					<p>{:date('Y-m-d H:i',$vo.starttime)}至 {:date('Y-m-d H:i',$vo.endtime)}结束 
+					　　峰会地址：{$vo.address}</p>
+				</li>
+			 {/uk:select}
+			</ul>
+		</div>
+	</div>
+	<div id="select_btn">
+		
+		<ul>
+		   	{uk:select table="articles" where ="status=1" field="id,cname,title,logo" order="orders asc" limit="0,12" place="1" cid="30"}
+		  <li class="" style="border: none;">
+		  <a href="/index.php/articles/{$vo.id}" title="{$vo.title}"><span class="select_text">{$vo.title}</span></a>
+		  </li>
+		   	{/uk:select}
+		  
+		</ul>
+	</div>	
+</div>
+<!-- 焦点图代码结束 -->
+	</div>
+
+	 
+</div>
+
+
+<!--第一屏内容结束-->
+<div class="area blank10"></div>
+<!--第二通栏开始-->
+
+<!--第二通栏结束-->
+<div class="area blank10"></div>
+<!--招商引资项目推荐开始-->
+<div class="Menupark">
+     <div class="Menured">中国热门招商引资新闻</div>
+</div>
+<div class="layui-progress layui-progress-big" style="border-radius: 0px;background: #333;height:10px">
+  <div class="layui-progress-bar layui-bg-green" lay-percent="35%"  style="border-radius: 0px;background: #f4292c!important;height:10px;"></div>
+</div>
+<div class="area blank10"></div>
+<div class="Prak">
+     <div class="Bpark">
+      <div class="Pnewstit">
+	      <div class="ParkTIT">最新新闻质询</div>
+		  <div class="Parkmore"></div>
+		  <div class="Parkmall"><a href="/index.php/journalism" target="_blank">更多</a></div>
+	  </div>
+	  <div class="Pnews">
+       	<ul>
+	      	{uk:select table="journalism" where ="status=1" field="id,cname,title,logo" order="create_time desc" limit="12" cid="17"}
+			<li><a href="/index.php/journalism/{$vo.id}" title="{$vo.title}">{$vo.title}</a></li>		      
+			{/uk:select}
+			  
+		</ul>
+	  </div>
+	 </div>
+	 <div class="Spark">
+	    
+<!-- 招商引资项目推荐start-->
+	    <div class="parkimg">
+		  <ul>
+		  {uk:select table="journalism" where ="status=1" field="id,cname,title,logo" order="create_time asc" limit="12" place="1" cid="17"}
+		  
+		     <li>
+				<div class="smalltu">
+				<div class="STu">
+				<a href="/index.php/journalism/{$vo.id}" target="_blank">
+				<img src="__UPLOAD__/{$vo.logo.path}" alt="{$vo.title}" border="0"></a></div>
+				<div class="STumenu"><p>
+				<a href="/index.php/journalism/{$vo.id}" target="_blank">{$vo.title}</a></p></div>
+				</div>
+			</li>
+   			{/uk:select}
+
+
+
+		  </ul>
+		</div>
+<!-- 园区推荐end-->
+	 </div>
+</div>
+
+<!--第二通栏结束-->
+<div class="area blank10"></div>
+<!--招商引资项目推荐开始-->
+<div class="Menupark">
+     <div class="Menured">中国热门产业园区招商</div>
+	
+</div>
+<div class="layui-progress layui-progress-big" style="border-radius: 0px;background: #333;height:10px">
+  <div class="layui-progress-bar layui-bg-green" lay-percent="35%"  style="border-radius: 0px;background: #f4292c!important;height:10px;"></div>
+</div>
+<div class="area blank10"></div>
+<div class="Prak">
+     <div class="Bpark Bpark-zf" style="float: left;">
+	      <div class="Pnewstit">
+		      <div class="ParkTIT">最新园区投资项目</div>
+			  <div class="Parkmore"></div>
+			  <div class="Parkmall"><a href="/index.php/investmentpark" target="_blank">更多</a></div>
+		  </div>
+		  <div class="Pnews">
+		       <ul>
+			      {uk:select table="investmentpark" where ="status=1" field="id,cname,title,logo" order="create_time asc" limit="12" cid="18"}
+  				  <li><a href="/index.php/investmentpark/{$vo.id}" title="{$vo.title}" target="_blank">{$vo.title}</a></li>
+  				  {/uk:select}
+  				 
+  				</ul>
+		  </div>
+	 </div>
+	 <div class="Spark">
+	    
+<!-- 招商引资项目推荐start-->
+	    <div class="parkimg">
+		  <ul>
+		  
+		  
+		     {uk:select table="investmentpark" where ="status=1" field="id,cname,title,logo" order="create_time asc" limit="12" place="1" cid="18"}
+		  
+		     <li>
+<div class="smalltu">
+<div class="STu">
+<a href="/index.php/investmentpark/{$vo.id}" target="_blank"><img src="__UPLOAD__/{$vo.logo.path}" alt="{$vo.title}" border="0"></a></div>
+<div class="STumenu"><p>
+<a href="/index.php/investmentpark/{$vo.id}" target="_blank">{$vo.title}</a></p></div>
+</div>
+</li>{/uk:select}
+   
+
+
+		  </ul>
+		</div>
+<!-- 园区推荐end-->
+	 </div>
+</div>
+
+<!--第二通栏结束-->
+<div class="area blank10"></div>
+
+<!--第二通栏结束-->
+<div class="area blank10"></div>
+<!--招商引资项目推荐开始-->
+<div class="Menupark">
+     <div class="Menured">政府招商引资信息</div>
+	 
+</div>
+<div class="layui-progress layui-progress-big" style="border-radius: 0px;background: #333;height:10px">
+  <div class="layui-progress-bar layui-bg-green" lay-percent="35%"  style="border-radius: 0px;background: #f4292c!important;height:10px;"></div>
+</div>
+<div class="area blank10"></div>
+<div class="Prak">
+     
+	 <div class="Spark">
+	    
+<!-- 招商引资项目推荐start-->
+	    <div class="parkimg">
+		  <ul>
+		  
+		 {uk:select table="government" where ="status=1" field="id,cname,title,logo" order="create_time asc" limit="0,12" place="1" cid="20"}
+		     <li>
+			<div class="smalltu">
+			<div class="STu">
+				<a href="/index.php/government/{$vo.id}" target="_blank"><img src="__UPLOAD__/{$vo.logo.path}" alt="{$vo.title}" border="0"></a>
+			</div>
+			<div class="STumenu"><p><a href="/index.php/government/{$vo.id}" target="_blank">{$vo.title}</a></p></div>
+			</div>
+			</li>
+		{/uk:select}
+		  </ul>
+		</div>
+<!-- 园区推荐end-->
+	 </div>
+	 <div class="Bpark Bpark-zf" style="float: left;">
+	      <div class="Pnewstit">
+		      <div class="ParkTIT">最新投资项目</div>
+			  <div class="Parkmore"></div>
+			  <div class="Parkmall"><a href="/index.php/government">更多</a></div>
+		  </div>
+		  <div class="Pnews">
+		       <ul>
+			      {uk:select table="government" where ="status=1" field="id,cname,title,logo" order="create_time asc" limit="12" cid="20"}
+  				  <li><a href="/index.php/government/{$vo.id}" title="{$vo.title}">{$vo.title}</a></li>      
+  				  {/uk:select}
+  				   
+  				</ul>
+		  </div>
+	 </div>
+</div>
+
+
+
+
+</div>
+<div class="area blank10"></div>
+{/block}

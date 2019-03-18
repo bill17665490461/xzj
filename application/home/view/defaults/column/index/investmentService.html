@@ -1,0 +1,51 @@
+{extend name="defaults/layout"/}
+{block name="content"}
+<div class="cp-top">
+    <div class="layui-container" style="padding: 0px;width: 1200px;">
+        <div class="layui-row">
+            <div class="layui-col-xs12 layui-col-sm12 layui-col-md12">
+                <div class="grid-demo grid-demo-bg1">
+                    <p style="font-size: 20px;font-weight: bold;padding: 50px 0px;margin: 50px 0 20px 0">服务特性</p>
+                </div>
+            </div>
+            {uk:select table="article" where ="status=1" extfield="content" field="id,cname,title,cover" order="orders asc" limit="12" cid="31"}
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md4">
+                <div class="grid-demo grid-demo-bg1">
+                    <div class="in-div">
+                        <img src="__UPLOAD__/{$vo.cover.path}">
+                        <h3>{$vo.title}</h3>
+                        {:htmlspecialchars_decode($vo.content)}
+                    </div>
+                </div>
+            </div>
+            {/uk:select}
+        </div>
+    </div>
+
+
+</div>
+<div class="cp-button" style="background: #f5f3f3;margin: 50px 0px;padding-bottom: 50px">
+    <div class="layui-container" style="padding: 0px;width: 1200px;">
+        <div class="layui-row">
+            <div class="layui-col-xs12 layui-col-sm12 layui-col-md12">
+                <div class="grid-demo grid-demo-bg1">
+                    <p style="font-size: 20px;font-weight: bold;padding: 50px 0px;">服务对象</p>
+                </div>
+            </div>
+            {uk:select table="article" where ="status=1" extfield="content" field="id,cname,title,cover" order="orders asc" cid="32"}
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md4">
+                <div class="grid-demo grid-demo-bg1">
+                    <div class="in-div-fw">
+                        <img src="__UPLOAD__/{$vo.cover.path}">
+                        <h3>{$vo.title}</h3>
+                        {:htmlspecialchars_decode($vo.content)}
+                        
+                    </div>
+                </div>
+            </div>
+            {/uk:select}
+        </div>
+    </div>
+</div>
+
+{/block}

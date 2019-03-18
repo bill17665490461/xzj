@@ -1,0 +1,129 @@
+@charset "utf-8";
+/* 代码整理：懒人之家 www.lanrenzhijia.com */
+* {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+body {
+	font-size:12px;
+}
+img {
+	border:none;
+}
+.align_catg {
+	line-height:25px;
+	float:right;
+	padding-left:5px;
+}
+.categ_color_p {
+	float:right;
+	margin-bottom:0px!important;
+	padding-left:5px;
+}
+.feature_cat .link-more {
+	background:none!important;
+	text-transform:none;
+	font-weight:normal;
+	padding-left:0px!important;
+}
+.feature_cat .icon_cat {
+	padding-left:0px!important;
+}
+.feature_cat .link-more:hover {
+	text-decoration:line-through;
+}
+.align_catg img  {float:right}
+.icon_cat  {
+	padding-left:26px;
+	line-height:23px;
+	display:block;
+	float:left;
+	font-family:'edelsansRegular', Verdana;
+	font-size:11px;
+	text-transform:uppercase}
+.middle {
+	padding:0;
+	width: 960px;
+	height: 325px;
+	margin:0 auto;
+	clear:both
+}
+#feature_list {
+	width: 960px;
+	height: 325px;
+	overflow: hidden;
+	position: relative;
+	z-index:1;
+}
+#feature_list ul {
+	position: absolute;
+	top: 0;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+#feature_tabs {
+	right: 0;
+	z-index: 2;
+	width: 324px;
+}
+#feature_tabs li {
+	margin:0;
+	padding:20px 25px 0 40px;
+	font-size: 13px;
+	font-family: Arial;
+	height:89px;
+	color: #ccc;
+	background:url(../images/feature_tab_bg.png) 0 0 no-repeat;
+}
+#feature_tabs li:hover {
+	cursor:pointer;
+}
+#feature_tabs li:last-child {
+	height:107px
+}
+#feature_tabs li .link-title {
+	color:#ccc;
+	font-size:13px
+}
+#feature_tabs li .link-more {
+	text-decoration: none;
+	color:#666;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:14px;
+	font-style:italic;
+}
+#feature_tabs li .link-more:hover {
+	border-bottom:1px dotted #666
+}
+#feature_tabs li.current {
+	background:url(../images/feature_current.png) 0 0 no-repeat
+}
+#feature_output {
+	top:0;
+	right: 0;
+	width: 960px;
+	height: 325px;
+	position: relative;
+	margin:0;
+	padding:0;
+}
+#feature_output li {
+	position: absolute;
+	width: 960px;
+	height: 325px;
+	margin:0;
+}
+#feature_output li a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width:636px;
+	height:325px;
+}
+.feature_cat {
+	text-align:right;
+	padding:10px 0
+}
+/* 代码整理：懒人之家 www.lanrenzhijia.com */

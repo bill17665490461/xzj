@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* CSS Document */
+/*二维码服务*/
+.fl { display:inline; float:left;}
+.fr { display:inline; float:right;}
+.fw_link {  margin:0 auto; width:1198px; border:1px solid #ccc; background-color:#fff; color:#5d5d5d; margin-bottom:10px; overflow:hidden; text-align:left;}
+.fw_link h4{ font-size:16px; height:28px; padding-left:2px; font-weight:normal; margin-top:5px; line-height:28px;}
+
+.fw_link .fw_ew{ width:254px; margin-left:6px; color:#999999; border-right:1px solid #ccc; height:186px;}
+.fw_link .fw_ew_info { margin-top:0px; text-align:center; margin-left:0px;}
+.fw_link .fw_ew p{ text-align:center; font-size:12px; line-height:28px;}
+.fw_link .fw_ew h4 i { background:url(../images/foot/foot-icon.jpg) -7px -3px no-repeat; float:left; display:block; height:28px; width:22px;}
+	
+.fw_link .fw_gg{ width:268px; margin-left:6px; color:#999999; border-right:1px solid #ccc; height:186px;}
+.fw_link .fw_gg_link { margin-top:10px; text-align:left;}
+.fw_link .fw_gg_link li { font-size:13px; line-height:24px; padding-top:0px;  padding-bottom:5px; margin-left:35px;}
+.fw_link .fw_gg_ad1 { background-position:-42px -4px;}
+.fw_link .fw_gg_ad2 { background-position:-42px -34px;}
+.fw_link .fw_gg_ad3 { background-position:-42px -82px;}
+.fw_link .fw_gg_ad4 { background-position:-42px -110px;}
+.fw_link .fw_gg_ad5 { background-position:-42px -60px;}
+.fw_link .fw_gg h4 i { background:url(../images/foot/foot-icon.jpg) -0px -41px no-repeat; float:left; display:block; height:28px; width:38px;}
+	
+.fw_link .fw_dt{ width:363px; overflow:hidden; margin-left:6px; color:#999999; height:186px;}
+.fw_link .fw_dt_info { margin-top:5px; margin-left:30px; margin-right:10px;}
+.fw_link .fw_dt_info ul { width:100%;}
+.fw_link .fw_dt_info li { text-align:left; overflow:hidden; white-space:nowrap; text-overflow: ellipsis; background:url(../images/foot/cDotted2.gif) no-repeat 0px center; padding-left:10px; line-height:24px; font-size:13px;}
+.fw_link .fw_dt_info li a { color:#999999;}
+.fw_link .fw_dt_info li a:hover { color:#ba2636;}
+.fw_link .more { float:right; font-size:12px; line-height:28px; margin-right:10px;}
+.fw_link .more a { color:#999999;}
+.fw_link .more a:hover { color:#ba2636; text-decoration:underline;}
+.fw_link .fw_dt h4 i { background:url(../images/foot/foot-icon.jpg) 0px -71px no-repeat; float:left; display:block; height:28px; width:35px;}
+
+.fw_link .fw_xq { margin-left:6px; width:286px; overflow:hidden; color:#999999; border-right:1px solid #ccc; height:186px;}
+.fw_link .fw_xq h4 { margin-top:5px; padding-bottom:6px; font-size:16px; line-height:28px; height:28px;}
+.fw_link .fw_xq p { font-size:12px; line-height:26px; margin-left:2px;}
+
+
+
+
+/*底部*/
+#footer{ margin:0 auto; width:1200px;  color:#999999;text-align:center;clear:both; font-size:12px; background-color:#fff;}
+#footer .p{line-height:30px; background:#fff; width:960px; height:30px; margin:0 auto;}
+#footer .p a{color:#999999;margin:0 10px;text-decoration:none; display:inline-block; height:30px;}
+#footer .p a:hover{color:#ba2636; text-decoration: underline;}
+.foot_rz{ padding:6px 0; background-color:#fff;}
+.foot_rz img{ margin:0px; display:inline; padding:0; padding:0 5px;}
+.foot_rz p{ text-align:center; line-height:24px; font-size:12px; margin:0; padding:0; margin-top:5px;}
+#footer .gz_ico { display:inline-block; background:url(../images/foot/gz.jpg) left center no-repeat; padding-left:20px;}
+#footer .ds_ico { display:inline-block; background:url(../images/foot/ds.jpg) left center no-repeat; padding-left:20px;}
+
+/*友情链接*/
+.links {clear:both; width:940px; margin:0 auto; background:#fff; padding:6px 10px; line-height:21px; font-size:12px;}
+.links2 {clear:both; width:960px; text-align:center; margin:0 auto; background:#fff; line-height:21px;}
+.links .leftico{ float:left; width:70px;  line-height:21px;   padding-left:0px;}
+.link_c{ float:left; width:840px; text-align:left; line-height:21px; font-size:12px;}
+.link_c a{ color:#999; text-decoration:none; margin-right:5px;}
+.link_c a:hover { text-decoration:underline; color:#ba2636;}

@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>透明切换tab标签样式焦点图轮播效果</title>
+<link href="css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.featureList-1.0.0.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$.featureList(
+			$("#feature_tabs li"),
+			$("#feature_output li"), {
+				start_item : 0,
+				transition_interval: 5000
+			}
+		);
+	});
+</script>
+</head>
+<body>
+<div class="middle">
+<div id="feature_list">
+			<ul id="feature_tabs">
+				<li><span class="link-title">Beautiful flying people are invading 
+				some corn fields in Lacoste land</span>
+				<div class="feature_cat">
+					<p class="icon_cat" style="color:#f1dc2b">
+					<span class="categ_color_p"><span class="align_catg">Photography</span>
+					<img src="images/icon_cat_1.png" alt="Photography" />					</span></p>
+					<a href="http://www.lanrenzhijia.com/" class="link-more">
+					Read more</a></div>
+				</li>
+				<li><span class="link-title">Learn how to enjoy more the weekend 
+				getaways, togheter with your family</span>
+				<div class="feature_cat">
+					<p class="icon_cat" style="color:#8fbd03">
+					<span class="categ_color_p"><span class="align_catg">Gadgets</span>
+					<img src="images/icon_cat_2.png" alt="Gadgets" />					</span></p>
+					<a href="http://www.lanrenzhijia.com/" class="link-more">
+					Read more</a></div>
+				</li>
+				<li><span class="link-title">Best music albums of 2010: Lifestyle 
+				Mojo</span>
+				<div class="feature_cat">
+					<p class="icon_cat" style="color:#ca62f0">
+					<span class="categ_color_p"><span class="align_catg">Music</span>
+					<img src="images/icon_cat_3.png" alt="Music" />					</span></p>
+					<a href="http://www.lanrenzhijia.com/" class="link-more">
+					Read more</a></div>
+				</li>
+			</ul>
+			<ul id="feature_output">
+				<li>
+				<img src="images/lanrenzhijia1.jpg" height="325" width="960" class="slider-img" />
+				<a href="http://www.lanrenzhijia.com/">				</a></li>
+				<li>
+				<img src="images/lanrenzhijia2.jpg" height="325" width="960" class="slider-img" />
+				<a href="http://www.lanrenzhijia.com/">				</a></li>
+				<li>
+				<img src="images/lanrenzhijia3.jpg" height="325" width="960" class="slider-img" />
+				<a href="http://www.lanrenzhijia.com/">				</a></li>
+			</ul>
+		</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,378 @@
+@charset "utf-8";
+/* CSS Document */
+/* 工具 */
+.newtool{width: auto;min-width: 1200px;height:54px;border-bottom:1px solid #ddd;padding:15px 0;border-top:4px solid #bb1122;overflow:hidden;}
+.newtoolnr{width:1200px;height:54px; margin:0 auto;overflow:hidden;}
+.newtoolnr .td{float:left;width:286px;height:54px;background:url(../images/web_bg/icon01.png) no-repeat 40px 0;border-right:1px dashed #ddd;}
+.newtoolnr .td .tool100{ width:100px; float:left;height:54px;}
+.newtoolnr .td .tool100 a{width:100px; height:54px;display:inline-block;}
+.newtoolnr .td.w230{width:339px;background-position:40px 0px;}
+
+.newtoolnr .td.nob{border-right:0px}
+.newtoolnr .td.no1{background-position:40px -56px;}
+.newtoolnr .td.no2{background-position:40px -112px;}
+.newtoolnr .td.no3{background-position:40px -168px;}
+.newtoolnr .td .s1{height:30px;line-height:30px;font-size:18px;font-weight:bold}
+.newtoolnr .td .s2{height:20px;line-height:20px;font-size:14px;margin-top:4px;float: left; margin-left: 10px;}
+.newtoolnr .td .s2 a{margin-right:10px; text-align:left; display:inline-block;}
+.newtoolnr span{float:left;width:14px;height:54px;border-right:1px dashed #ddd;margin-right:22px;display:block;}
+/*顶部搜索*/
+.NTsearch{margin:0 auto; width:1200px;overflow:hidden;}
+.NTsearch .logo{margin:0 auto; overflow:hidden;width:280px;float:left; height:60px; text-align:left;overflow:hidden;}
+.NTsearch .logo{background:url(../images/parklogo.gif) left 5px no-repeat;}
+.NTsearch .logo a{display:block;height:60px; width:280px;}
+.NTsearch .infoadd{margin:0 auto;overflow:hidden; width:360px; float:left; height:60px; padding-left:15px; line-height:60px; text-align:left;}
+.NTsearch .city{margin:0 auto;overflow:hidden; width:160px; float:left; height:60px;}
+.NTsearch .city .cname{ width:160px; clear:both; line-height:22px;}
+.NTsearch .city .cname2{ width:160px;line-height:22px;}
+.NTsearch .city .cname2 a{height:22px; padding:0px 6px; line-height:22px; border:1px solid #e2e2e2; font-size:12px; font-weight:100;display:inline-block;cursor: pointer;}
+/*** 切换其它城市 ***/
+.NTsearch .city .cname2 .sidenavchild {background:#fff;border:solid 2px #dedede;padding:15px;width:400px; position:absolute;z-index:10000;color:#CCCCCC; text-align:left;overflow:hidden;}
+.NTsearch .city .cname2 .sidenavchild a{color:#000; padding:0;display:inline-block; height:30px; line-height:30px;width:45px; text-align:center;border:none;}
+.NTsearch .city .cname2 .sidenavchild a:hover{color:#fff; background-color:#bb1122;}
+.NTsearch .city .cname2 .sidenavchild img.gb{float:right;margin-right:0px;margin-top:0px;_margin-top:0px; cursor:pointer;border:solid 1px #eee;width:16px;height:16px;display:inline-block;background:#fff;}
+.NTsearch .city .cname2 .sidenavchild img.gb:hover{background:#eee;border:solid 1px #ddd;}
+
+/*search*/
+.NTsearch .sitesearch{margin:0 auto;overflow:hidden; float:right; width:500px; height:60px;}
+.NTsearch .sitesearch .alStit{width:500px;overflow:hidden; text-align:center; padding:0; float:left; margin:10px 0px 0px 0px;}
+
+.NTsearch .sitesearch .alScont{width:500px;overflow:hidden; margin:0px auto; overflow:hidden;}
+.NTsearch .sitesearch .alScont .input2{float: left;width:390px;text-indent: 10px;height: 36px;line-height:36px;vertical-align: bottom;border:3px solid #bb1122;font-size: 14px;color: #888;font-size: 14px;outline: none;}
+.NTsearch .sitesearch .alScont .btnSearch{ background: #bb1122 url(../images/web_bg/sbutton.gif) no-repeat top left; border: 0 none; color: #FFFFFF; cursor: pointer; float: left; font-size: 16px; height: 42px; text-indent: -9999px;width: 92px; vertical-align: middle; white-space: nowrap;}
+/*---------------------------------parkinfo------------------------------*/
+/* address */
+.parkadd{margin:0 auto;overflow:hidden;width:1200px; height:43px;/* border-top:1px dashed #dedede;border-bottom:1px dashed #dedede;*/ }
+.parkadd .paddress{float:left;overflow:hidden;line-height:43px; color:#666666;}
+.parkadd .paddress a{color:#666666;}
+.parkadd .paddress a:hover{color:#ee0000;}
+.parkadd .parkdate{float:right;overflow:hidden;line-height:43px; color:#999999;}
+.parkadd .parkdate a{color:#999999;}
+
+/* PARK TITLE*/
+.PARK_TIT{MARGIN:0 AUTO;overflow:hidden; width:1200px; height:60px; padding:10px 0;}
+.PARK_TIT .titimg{float:left;overflow:hidden;width:90px; height:60px;}
+.PARK_TIT .titimg img{width:90px; height:60px;}
+.PARK_TIT .parktitle{float:left;overflow:hidden;height:60px;margin-left:15px;text-align:left;}
+.PARK_TIT .parktitle .btit{height:40px;}
+.PARK_TIT .parktitle .btit h1{height:40px;float: left;display: inline; font-size:28px;}
+.PARK_TIT .parktitle .btit .parkjb{float: left;display: inline;margin: 15px 0 0 10px;position: relative;z-index: 1000;}
+.PARK_TIT .parktitle .btit .parkjb span{ padding:2px 8px;border-radius:2px;display:block; float:left; color:#999999; white-space:nowrap;}
+.PARK_TIT .parktitle .stit{height:20px;display: inline;}
+.PARK_TIT .parktitle .stit span{display:block;border-radius:2px; background:#bbbbbb; color:#FFFFFF; padding:2px 8px; float:left; margin-right:5px;}
+.PARK_TIT .parktitle .stit em{display:block;border-radius:2px; background:#cc0000; color:#FFFFFF; padding:2px 8px; float:left; margin-right:5px;}
+
+.PARK_TIT .parktel{float:right; height:60px;overflow:hidden;}
+.PARK_TIT .parktel .tel400{margin-top:20px;background: url(../images/web_bg/Tel.gif) no-repeat 0px 3px;padding-left:25px;color:#CC0000; font-size:16px;overflow:hidden;}
+.PARK_TIT .parktel .tel400 span{height:40px; display:block; line-height:40px; font-size:22px;  font-weight:bold; float:left;}
+.PARK_TIT .parktel .tel400 em{height:40px; display:block; line-height:40px;float:left;}
+/*  parkinfo menu */
+.parktool{margin:0 auto;overflow:hidden; width:1198px; border-top:1px solid #e9e9e9;border-right:1px solid #e9e9e9;border-left:1px solid #e9e9e9; border-bottom:2px solid #cc0000; height:36px;}
+.parktool .parknval{float: left;font-size: 16px;width: 100%; line-height:36px;}
+.parktool .parknval a, .parktool .parknval a:visited {float: left;padding: 0 20px;font-weight: bold;}
+.parktool .parknval a:hover {color:#cc0000;text-decoration: none;}
+.parktool .parknval .nnlon{text-decoration: none;background:#cc0000;color:#ffffff;}
+.parktool .parknval .nnlon:hover{color:#ffffff;text-decoration: none;}
+.parkhuodong{margin:0 auto;overflow:hidden; width:1200px;background: url(../images/web_bg/huodong_bg.jpg);}
+.parkhuodong .huodong{margin:0 auto;padding:15px 0; width:1100px;}
+.parkhuodong .huodong p{font-size: 36px;height: 38px;line-height: 38px;text-align: left;font-weight: bold;color:#ffdd00;padding-left: 30px;}
+/*parkcon one*/
+.parkonecon{margin:0 auto;overflow:hidden; width:1200px;}
+.parkonecon .oneconleft{float:left;overflow:hidden; width:480px;}
+.parkonecon .oneconright{float:right;overflow:hidden; width:700px;}
+.parkonecon .oneconright .informationli{line-height:32px;font-size: 14px;float: left; width:700px; text-align:left; overflow:hidden;}
+.parkonecon .oneconright .informationli .inf_left{width:80px;overflow:hidden;}
+.parkonecon .oneconright .informationli .inf_right{}
+.parkonecon .oneconright .informationli .inf_right span{display:block;border-radius:2px; background:#bbbbbb; color:#FFFFFF; padding:0px 5px;float:left; margin-right:5px;margin-top:3px; white-space:nowrap;}
+.parkonecon .oneconright .informationli .inf_right em{display:block;padding:0px 5px;float:left; margin-right:5px;}
+.parkonecon .oneconright .informationli2{line-height:32px;font-size: 14px;float: left; width:700px;text-align:left;}
+.parkonecon .oneconright .informationli2 .inf_left2{width:80px;height:64px; overflow:hidden;}
+.parkonecon .oneconright .informationli2 .inf_right2{width:620px; overflow:hidden;}
+.parkonecon .oneconright .informationli2 .inf_right2 span{display:block;border-radius:2px; background:#dedede; color:#111111; padding:0px 5px;float:left; margin-right:5px;margin-top:3px; white-space:nowrap;}
+.parkonecon .oneconright .informationli2 .inf_right2 em{display:block;padding:0px 5px;float:left; margin-right:5px; height:32px; width:100%; text-align:left;}
+.parkonecon .oneconright .informationli3{line-height:32px;font-size: 14px;float: left; width:700px; text-align:right; overflow:hidden;}
+.parkonecon .oneconright .informationli3 a{ color:#CC0000;}
+.parkonecon .oneconright .information_lione{ overflow:hidden;line-height:54px;float: left; width:700px;text-align:left; height:54px; border-top:1px solid #dedede;border-bottom:1px solid #dedede;}
+.parkonecon .oneconright .information_lione .parktel2{float:left; height:54px; overflow:hidden;}
+.parkonecon .oneconright .information_lione .parktel2 .tel4002{background: url(../images/web_bg/Phone.gif) no-repeat 0px 9px;padding-left:45px;color:#CC0000; font-size:16px; overflow:hidden;}
+.parkonecon .oneconright .information_lione .parktel2 .tel4002 span{display:block; font-size:22px;font-weight:bold; float:left;}
+.parkonecon .oneconright .information_lione .parktel2 .tel4002 em{display:block;float:left; color:#333333;}
+/*park recommand img*/
+.recomparkimg{margin:0 auto;overflow:hidden; width:480px;}
+.focusbox{background-color:#efefef; position:relative;}
+.focusimg{border:0px solid #2F2F2F; width:480px; height:320px; position:relative; overflow:hidden;}
+.fimglist{width:4800px; position:relative;}
+.fimglist img{display:block; width:480px; height:320px; cursor:pointer;}
+.fimglist li{width:480px; height:320px; float:left;-webkit-transform-origin:50% 100%;transform-origin:50% 100%;}
+.fimglist li.onpre{-webkit-animation:onpre .5s ease-in-out;animation:onpre .5s ease-in-out;opacity:0;-webkit-transform:scale(0.8,0.8);transform:scale(0.8,0.8);}
+@-webkit-keyframes onpre{
+	0%{opacity:1;-webkit-transform:rotateY(0deg);}
+	100%{opacity:0;-webkit-transform:rotateY(90deg)}
+}
+@keyframes onpre{
+	0%{opacity:1;transform:rotateY(0deg);}
+	100%{opacity:0;transform:rotateY(90deg)}
+}
+.focustool{width:480px; overflow:hidden; padding:5px 0 0px 0; margin:0 auto; position:relative;}
+.ftoollist{width:4800px; position:relative;}
+.ftoollist img{display:block; width:90px; height:60px; margin-bottom:3px;}
+.ftoollist a{background-color:#999999; display:block; width:90px; padding:4px 0 4px 5px; position:relative;-webkit-transition:all .3s linear;transition:all .3s linear;}
+.ftoollist li{float:left; cursor:pointer; -webkit-transition:all .3s linear; transition:all .3s linear;}
+.ftoollist .imgname{line-height:20px; text-align:center; color:#FFF; font-weight:100;  height:20px; overflow:hidden; cursor:pointer;}
+.ftoollist a:hover{background-color:#503769; padding:4px 5px; margin-right:-4px; z-index:100; top:-5px;}
+.ftoollist a:hover .imgname{color:#DBC98C;}
+.ftoollist a:hover .imgshortcat{color:#FFF;}
+.ftoollist .on a{background-color:#cc0000; padding:4px; margin-right:-4px; z-index:100; top:-5px;}
+.ftoollist .on .imgname{color:#DBC98C;}
+.ftoollist .on .imgshortcat{color:#FFF;}
+/*投资表样式*/
+
+/*通用菜单样式*/
+.parkinfo_men{margin:0 auto;overflow:hidden;width:1200px; height:42px;background: url(../images/web_bg/grey.gif) repeat-x 0px 0px;}
+.Menu_grey{margin:0 auto; widtH:100%; height:42px;background: url(../images/web_bg/grey.gif) repeat-x 0px 0px;}
+.Menu_red{margin:0 auto; float:left; height:42px;background: url(../images/web_bg/42red.gif) repeat-x 0px 0px; font-size:16px; line-height:40px; color:#333333; padding:0; font-weight:bold;}
+.Menu_red a{ text-decoration:none;}
+.Menu_red_right{ float:right; height:40px; color:#666666; text-align:right;}
+.Menu_red_right .Plink{ margin-top:14px; padding:0 8px; font-size:14px; line-height:24px; text-align:right;}
+.Menu_red_right .Plink a{padding:0 8px;height:24px;display:inline-block; color:#999999;}
+.Menu_red_right .Plink a:hover{ color:#ba2636; text-align:center;}
+/*园区相关资讯*/
+.park_aboutnews{margin:0 auto;overflow:hidden; width:340px;}
+.park_aboutnews .Pkabnew{margin:0 auto; width:340px;}
+.park_aboutnews .Pkabnew ul {margin: 0;width: 340px; font-size:15px; text-align:left; padding:10px 0;}
+.park_aboutnews .Pkabnew ul li {background: url(../images/web_bg/cDotted2.gif) no-repeat 0px 13px;padding: 0 0px 0 15px;}
+.park_aboutnews .Pkabnew ul li { white-space:nowrap; overflow: hidden; text-overflow:ellipsis;height: 30px;line-height: 30px;}
+
+/**园区左侧投资咨询**/
+ul.home_list_tp{padding:0;overflow:hidden;font-size: 14px;line-height:34px;}
+ul.home_list_tp li{ overflow:hidden; text-align:left; width:auto; padding:2px 0 2px 0;}
+ul.home_list_tp li a{ color:#05A0E0;}
+ul.home_list_tp li a:hover{ color:#c00;}
+ul.home_list_tp li input,ul.home_list_tp li textarea
+{padding:0px 4px;border: 1px solid #aaa;color:#666666;line-height:34px;font-size: 14px;}
+ul.home_list_tp li .buttn2{background:#d00000; height:36px; color:#FFFFFF;line-height:30px;width:200px;border-radius: 3px; font-family:"微软雅黑"; font-size:16px;}
+ul.home_list_tp li .tuw{width:460px;}
+ul.home_list_tp li .tuw220{width:220px;}
+ul.home_list_tp li .tuw110{width:110px;}
+ul.home_list_tp li img{ height:34px; border:1px solid #bbb;}
+ul.home_list_tp li .tuH{ height:100px;}
+ul.home_list_tp li .rigt10{margin-right:10px;}
+ul.home_list_tp li input{height:34px;}
+ul.home_list_tp li input,ul.home_list_tp li textarea{star : expression(onmouseover=function(){this.style.borderColor="#cc0000"},onmouseout=function(){this.style.borderColor="#ddd"})}
+/*园区相册样式*/
+.Parkimg-Pic{margin:0 auto;overflow:hidden; width:1200px; margin-top:10px;}
+.Parkimg-Pic .Park_pic{ width:228px; float:left; margin-right:15px;}
+.Parkimg-Pic .nonmar{margin-right:0;}
+.Parkimg-Pic .Park_pic img{width:228px; height:152px;}
+.Parkimg-Pic .Park_pic .img2{ transition: all .3s ease;-webkit-transition: all .3s ease;-moz-transition: all .3s ease;-ms-transition: all .3s ease;-o-transition: all .3s ease; } 
+.Parkimg-Pic .Park_pic .img2:hover { transform:scale(1.04,1.04);-ms-transform:scale(1.04,1.04);-o-transform:scale(1.04,1.04); -webkit-transform:scale(1.04,1.04); }
+.Parkimg-Pic .Park_pic p{ width:228px; line-height:18px; text-align:left; height:45px; padding-top:10px; font-weight:bold; font-size:14px;}
+/*company style*/
+.Park_com{margin:0 auto;overflow:hidden; width:1200px; margin-top:10px;}
+.Park_com ul{width:1200px; text-align:left;}
+.Park_com ul li{float:left; width:300px;white-space:nowrap; overflow: hidden; text-overflow:ellipsis; height:30px; line-height:30px; font-size:14px;}
+/*park map*/
+.Park_map{margin:0 auto;overflow:hidden; width:1200px; margin-top:10px;}
+#allmap{width:100%;height:300px;overflow: hidden;}
+/*---------------------------详情-------------------------------*/
+.parkinfo{margin:0 auto;overflow:hidden; width:1200px;}
+.parkinfo_L{float:left;overflow:hidden; width:800px;}
+.parkinfo_list{ margin:0 auto;overflow:hidden; width:800px;}
+.parkinfo_L .Pkinfo_tit{width:760px; height:36px; border-bottom:1px dashed #696969; text-align:left; line-height:36px;}
+.parkinfo_L .Pkinfo_tit span{font-size:16px; font-weight:bold;background: url(../images/web_bg/info_d.gif) no-repeat left center;padding-left: 16px;}
+#info_body{/*margin: 0 auto;*/ overflow:hidden;font-size: 15px; line-height:26px;text-decoration: none;word-spacing: normal;text-align: left; width:100%; padding:10px 0; width:760px;}
+#info_body A {COLOR: #0033FF; text-decoration:underline;}
+#info_body A:visited {COLOR: #0033FF; text-decoration:underline;}
+#info_body A:hover {COLOR: #ba2636; text-decoration:underline;}
+#info_body img{ border:2px solid #d8d8d8;}
+#info_body img {behavior: url("http://www.cnrepark.com/js/parkimgzoom.htc");}
+#info_body p{ padding:10px 0;}
+
+.parkinfo_R{float:right;overflow:hidden; width:400px;}
+.parkinfo400{width:400px;overflow:hidden;}
+.parkinfo400 .Pktoptit{width:400px;border-bottom:3px solid #222222; text-align:left; line-height:36px;}
+.parkinfo400 .Pktoptit span{font-size:16px; font-weight:bold;}
+/*园区排行榜*/
+.pul02{width:360px;overflow: hidden; text-align:left; border:1px solid #cdcdcd; padding:0px 19px;}
+.pul02 li{float:left;width:360px;height:46px; line-height:46px;overflow: hidden;*zoom: 1;border-top:1px dotted #d3d3d3;cursor:pointer;font-size:14px; margin-top:-1px;padding:0;}
+.pul02 li a{ display:block;cursor:pointer; text-decoration:none;}
+.pul02 li a:hover{ cursor:pointer;text-decoration:none;}
+.pul02 li a:hover span.rt{ color:#c00;}
+.pul02 li .num{ float: left; margin-right:10px; width:16px; height: 16px; line-height: 16px; background:url(../images/web_bg/TOP.gif) 0 -16px no-repeat; text-align:center; color:#fff;margin-top:15px;}
+.pul02 li .top3{float: left; margin-right:10px; width:16px; height: 16px; line-height: 16px; background:url(../images/web_bg/TOP.gif) 0 -0px no-repeat; text-align:center; color:#fff;margin-top:15px;}
+.pul02 li .tit{ float: left;width:210px; white-space:nowrap; overflow: hidden; text-overflow:ellipsis;}
+.pul02 li .prc{ float: left; width:60px; white-space:nowrap; overflow: hidden; text-overflow:ellipsis;}
+.pul02 li .rt{ float: right;width:64px;color:#999; text-align:right; text-overflow:ellipsis; }
+/*园区动态*/
+.list_con{width:760px;overflow:hidden; text-align:left; border-bottom:1px dashed #999999; padding:15px 0 15px 0;}
+.list_con .list_tit{width:760px; font-size:16px; line-height:40px; height:40px; font-weight:bold;}
+.list_con .list_pic{width:190px; float:left;}
+.list_con .list_pic img{width:180px; height:120px;}
+.list_con .list_Introduction{width:760px; font-size:14px; line-height:28px;}
+.list_con .list_time{width:760px; line-height:28px; color:#999999;height:28px;}
+.list_con .list_Introduction2{width:570px; font-size:14px; line-height:28px;float:left;}
+.list_con .list_time2{width:570px; line-height:28px; color:#999999;float:left;height:28px;}
+.news_list .Rtcon{float:right; width:400px;}
+/*入驻企业*/
+.comlist{width:760px;overflow:hidden; text-align:left;}
+.comlist .comlist_tit{width:760px; height:36px; border-bottom:1px dashed #696969; text-align:left; line-height:36px;}
+.comlist .comlist_tit span{font-size:16px; font-weight:bold;background: url(../images/web_bg/info_d.gif) no-repeat left center;padding-left: 16px;}
+.companylist { width:760px;overflow:hidden; text-align:left;}
+.companylist ul { width:760px; text-align:left; padding:15px 0;}
+.companylist ul li{ line-height:40px; height:40px;border-bottom:1px dotted #d3d3d3;}
+.companylist ul li{ background: url(../images/web_bg/cDotted2.gif) no-repeat 0px 19px;padding: 0 0px 0 15px;width:745px; }
+.companylist ul li .comlist_con{width:620px; float:left;font-size:14px;white-space:nowrap; overflow: hidden; text-overflow:ellipsis;}
+.companylist ul li .comlist_time{width:100px; color:#999999; float:right;}
+
+/*park img*/
+.parkimg_pictit{width:1200px;overflow:hidden; font-size:16px; font-weight:bold; border-bottom:3px solid #232323; text-align:left; height:40px; line-height:40px;}
+.parkimg_pictit span{ padding-left:0px;}
+.parkimg_plist{margin:0 auto;overflow:hidden; width:1200px;}
+.parkimg_plist ul{width:1200px; margin-bottom:20px; overflow:hidden;}
+.parkimg_plist ul li{float:left;width:228px;margin-top:13px;margin-right:15px;display:inline;}
+.parkimg_plist .parkimg_pone{margin:0 auto; float:left; overflow:hidden; width:228px; height:152px; text-align:center;}
+.parkimg_plist .nonemar{margin-right:0;}
+.parkimg_plist .parkimg_pone img{width:228px; height:152px;}
+.parkimg_plist .simginfo{padding-top:10px; width:228px; overflow:hidden;}
+.parkimg_plist .simginfo p{width:100%;line-height:20px;height:20px;overflow:hidden;}
+/*相册*/
+.rebox { overflow:hidden; cursor: pointer; position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: 1000; -webkit-filter: none !important;
+    background: rgb(0, 0, 0); /* IE Fallback (Solid Colour) */
+background-color:rgba(0,0,0,0.5);}
+.rebox *{ -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box; padding: 0; margin: 0; }
+.rebox-contents { position: absolute; top: 5%; left: 5%; text-align: center; width: 90%; height: 90%;}
+.rebox-contents .rebox-content { border: 5px solid #fff; box-shadow: 0 0 20px #000; border-radius: 1px; max-width: 100%; max-height: 100%;}
+.rebox-contents .rebox-content img{vertical-align: middle;}
+.rebox-loading { width: 31px; height: 31px; margin: -16px 0 0 -16px; position: absolute; top: 48%; left: 50%; }
+.rebox-caption { display: none; position: absolute; left: 0; bottom: 0; width: 100%; text-align: center; z-index: 1000; background: #000; background: rgba(0,0,0,0.8); }
+.rebox-caption p { margin: 0 auto; max-width: 70%; display: inline-block; *display: inline; *zoom: 1; padding: 10px; color: #fff; font-size: 16px; line-height: 26px; }
+.rebox-button { position: absolute; z-index: 9999; min-width: 45px; height: 45px; line-height: 45px; background: rgb(0, 0, 0); opacity:0.4; 
+
+    text-decoration: none; font-size: 12px; color: #fff; text-align: center; vertical-align: middle;
+    -webkit-border-radius: 32px; -moz-border-radius: 32px; -ms-border-radius: 32px; border-radius: 32px;
+    -webkit-transition: all 0.3s; -moz-transition: all 0.3s; -ms-transition: all 0.3s; transition: all 0.3s; }
+.rebox-button:hover,.rebox-button:focus { opacity: 1; -webkit-transform: scale(1.4); -moz-transform: scale(1.4); -ms-transform: scale(1.4); transform: scale(1.4); }
+.rebox-button:hover{ text-decoration:none;}
+.rebox-close { right: 10px; top: 10px; }
+.rebox-next { right: 20px; top: 48%; }
+.rebox-prev { left: 20px; top: 48%; }
+.rebox-loading { left: 50%; top: 48%;
+    -webkit-animation-name: spin; -webkit-animation-duration: 2000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin; -moz-animation-duration: 2000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear;
+    -ms-animation-name: spin; -ms-animation-duration: 2000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear;    
+    animation-name: spin; animation-duration: 2000ms; animation-iteration-count: infinite; animation-timing-function: linear;}
+
+@-ms-keyframes spin {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from { transform:rotate(0deg); }
+    to { transform:rotate(360deg); }
+}
+/*----------------------------------------园区列表--------------------------------------------*/
+/*页面右侧*/
+.park_list{margin:0 auto;overflow:hidden; width:1200px;}
+.park_listL{float:left;overflow:hidden; width:800px;}
+.park_listR{float:right;overflow:hidden; width:360px;}
+/*条件样式*/
+.park_s{margin:0 auto;overflow:hidden; width:1198px; border:1px solid #dddddd;font-size:14px; padding:15px 0 15px 0;min-height: 132px;}
+.park_s .park_s1{ margin:0 auto;overflow:hidden;width:1150px; line-height:28px;}
+.park_s .park_s1 .type1{width:60px;overflow:hidden;float: left; text-align:right; background:#dedede;}
+.park_s .park_s1 .qxName{width:1090px;overflow:hidden;float:left; text-align:left;}
+.park_s .park_s1 .qxName a,.park_s .park_s1 .qxName span{height:28px;display: inline-block; padding:0 6px 0 6px;border-radius: 3px;cursor:pointer;}
+.park_s .park_s1 .qxName .fred {color:#fff; background-color:#CC0000;}
+.park_s .park_s1 .qxName .fred a:link,.fred a:visited {color:#fff; background-color:#CC0000;text-decoration:none;}
+.park_s .park_s1 .qxName .fred a:hover {color:#fff; background-color:#CC0000;text-decoration:underline;}
+.park_s .park_s2{ margin:0 auto;overflow:hidden;width:1150px; line-height:28px; margin-top:10px;}
+.park_s .park_s2 .type2{width:60px;float: left;overflow:hidden; text-align:right; background:#dedede;}
+.park_s .park_s2 .qxName2{width:1090px;float:left;overflow:hidden; text-align:left;}
+.park_s .park_s2 .qxName2 a,.park_s .park_s2 .qxName2 span{height:28px;display: inline-block; padding:0 6px 0 6px;border-radius: 3px;cursor:pointer;}
+.park_s .park_s2 .qxName2 .fred2 {color:#fff; background-color:#CC0000;}
+.park_s .park_s2 .qxName2 .fred2 a:link,.fred2 a:visited {color:#fff; background-color:#CC0000;text-decoration:none;}
+.park_s .park_s2 .qxName2 .fred2 a:hover,.park_s .park_s2 .qxName2 span:hover {color:#fff; background-color:#F55555;text-decoration:none;}
+/***列表***/
+.fact_list{margin:0 auto;overflow:hidden; width:800px; padding:20px 0 20px 0; border-bottom:1px dashed #999999;}
+.fact_list .fact_incon{width:560px;overflow:hidden; float:left; text-align:left;}
+.fact_list .pk_price{margin:0 auto; float:right; width:240px;}
+.fact_list .pk_price .fact_Extension{margin:0 auto;width:240px;overflow:hidden;height:25px; text-align:right; color:#999999;}
+.fact_list .pk_price .fact_inprice{margin:0 auto;width:120px;overflow:hidden; float:right;text-overflow: ellipsis;white-space: nowrap; text-align:right; font-size:13px;}
+.fact_list .pk_price .fact_inprice strong{ font-size:20px; color:#CC0000;}
+.fact_list .pk_price .fact_area{width:120px;overflow:hidden; float:left;text-overflow: ellipsis;white-space: nowrap;font-size:13px;}
+.fact_list .pk_price .fact_area strong{ font-size:20px;}
+.fact_list .fact_incon .fact_tit{font-size:16px;overflow:hidden;height:31px;text-overflow: ellipsis;white-space: nowrap; font-weight:bold;}
+.fact_list .fact_incon .fact_add{font-size:13px;overflow:hidden; line-height:22px;text-overflow: ellipsis;white-space: nowrap; color:#666666;background: url(../images/web_bg/address.gif) 0 3px no-repeat;display: inline-block;padding-left: 18px;}
+.fact_list .fact_incon .fact_needarea{font-size:13px;overflow:hidden; line-height:22px;text-overflow: ellipsis;white-space: nowrap; color:#666666;}
+.fact_list .fact_incon .fact_date{font-size:13px; line-height:22px;text-overflow: ellipsis;white-space: nowrap; color:#666666;}
+/*----------图片样式列表----*/
+.fact_list .fact_inimg{width:110px;overflow:hidden; float:left; text-align:left; height:75px;}
+.fact_list .fact_inimg img{width:100px;overflow:hidden; height:75px; text-align:left;}
+.fact_list .fact_incon2{width:450px;overflow:hidden; float:left; text-align:left;}
+.fact_list .fact_incon2 .fact_tit{font-size:16px;height:31px;text-overflow: ellipsis;white-space: nowrap; font-weight:bold;}
+.fact_list .fact_incon2 .fact_tit span{font-size:14px; color:#666666; font-weight:normal; padding-left:15px;}
+.fact_list .fact_incon2 .fact_add{font-size:13px; line-height:22px;text-overflow: ellipsis;white-space: nowrap; color:#666666;background: url(../images/web_bg/address.gif) 0 3px no-repeat;display: inline-block;padding-left: 18px;}
+.fact_list .fact_incon2 .fact_date{font-size:13px; line-height:22px;text-overflow: ellipsis;white-space: nowrap; color:#666666;}
+
+/*广告样式*/
+.ad360{width:360px;overflow:hidden;}
+.ad800{width:800px;overflow:hidden;}
+/*会员登陆*/
+.fact_member{width:360px;overflow:hidden; border-top:3px solid #336699;}
+.fact_member .member_dl{height:44px;background: url(../images/web_bg/member.gif) no-repeat 0px 0px; margin-top:10px;padding-left:60px;}
+.fact_member .member_dl span{height:44px; display:block; line-height:44px;float:left; width:300px; text-align:left; font-size:14px; color:#666666;}
+.fact_member .member_dl em{height:22px; display:block; line-height:22px;float:left;width:300px;}
+.member_bt{width:360px; margin:0 auto;}
+.member_bt ul{width:360px; padding:10px 0 10px 0;}
+.member_bt ul li{ float:left;width:180px; height:40px; margin:5px 0; text-align:center;}
+.member_bt ul li span{ text-align:center;}
+.buttn{background:#336699;height:40px;width: 140px;color:#ffffff;line-height:40px;display:block; font-size:14px; text-align:center;border-radius: 3px; }
+.buttn a{height:40px;width: 140px; display:block; color:#FFFFFF;}
+.buttn:hover{ background:#cc0000;}
+.buttn a:hover{ color:#FFFFFF;}
+/*右侧厂房推荐*/
+.factinfo_rcon{width:360px;overflow:hidden;}
+.factinfo_rcon .Fttoptit{width:360px;border-bottom:3px solid #222222; text-align:left; line-height:36px;}
+.factinfo_rcon .Fttoptit span{font-size:16px; font-weight:bold;}
+.factinfo_rcon .new_fact{margin:0 auto; width:358px; border:1px solid #dedede;}
+.factinfo_rcon .new_fact ul {width:330px; margin:0 auto; padding:10px 0; text-align:left; font-size:15px;}
+.factinfo_rcon .new_fact ul li {background: url(../images/web_bg/cDotted2.gif) no-repeat 0px 13px;padding: 0 0px 0 15px;}
+.factinfo_rcon .new_fact ul li {overflow: hidden;line-height:24px; margin:4px 0;}
+.factinfo_rcon .new_fact ul li span{ color:#FF6600; font-size:13px; padding-left:8px;}
+/*列表右侧推荐park*/
+.parklist_park{margin:0 auto; width:360px;overflow:hidden;}
+.parklist_park .Tpark_tit{width:360px; font-size:16px; font-weight:bold; border-bottom:3px solid #333333; text-align:left; height:40px; line-height:40px;}
+.parklist_park .Tpark_tit span{ padding-left:0px;}
+.parklist_park .Tpark_con{margin:0 auto; width:360px;}
+.parklist_park .Tpark_con ul{width:360px;}
+.parklist_park .Tpark_con ul li{float:left;width:173px;margin-top:13px;margin-right:14px;display:inline;}
+.parklist_park .Tpark_con .Tpark_img{margin:0 auto; float:left; width:173px;text-align:center;/*position: relative;*/}
+.parklist_park .Tpark_con .nonmt{margin-right:0;}
+.parklist_park .Tpark_con .Tpark_img img{width:173px; height:115px;}
+.parklist_park .Tpark_con .simginfo{width:173px; margin-top:5px; float:left;}
+.parklist_park .Tpark_con .simginfo p{width:100%;line-height:36px;height:36px;overflow:hidden;}
+.parklist_park .Tpark_con .simginfo p{padding:0px 0; text-align:center; background:#dedede; cursor:pointer;}
+.parklist_park .Tpark_con .simginfo p:hover{ color:#FFFFFF; background:#336699;}
+.parklist_park .Tpark_con .simginfo p:hover a{ color:#FFFFFF;}
+.parklist_park .Tpark_con .simginfo p a:hover{ color:#FFFFFF; text-decoration:none;}
+
+/*列表页 2016.6.7*/
+.park_rank { width:1200px; margin:0 auto;}
+.parkRank_main { float:left; border:1px dashed #d7d7d7; width:590px; height:198px; overflow:hidden;}
+.parkRank_img { margin:4px; border:1px solid #d7d7d7; padding:4px; width:267px; float:left; display:inline;}
+.parkRank_info { float:right; display:inline; width:290px; text-align:left; margin-right:5px;}
+.parkRank_info .rank_title { font-size: 16px; height: 43px; text-overflow: ellipsis; white-space: nowrap; font-weight: bold; line-height:43px; margin-top:4px; overflow:hidden;}
+.parkRank_info .rank_p { line-height:26px; padding:1px 0;text-overflow: ellipsis; white-space: nowrap; overflow:hidden;}
+.padR-10 { padding-right:10px; font-weight:bold;}
+.width110 { width:110px; font-style:normal; display: inline-block;}
+.park_rank dl:nth-child(even) { margin-left:8px; margin-right:0px;}
+.park_rank dl:nth-child(odd) { margin-left:0px; margin-right:8px;}
+.park_rank dl { margin-bottom:10px;}
+

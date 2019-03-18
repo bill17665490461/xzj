@@ -1,0 +1,88 @@
+{extend name="defaults/layout"/}
+{block name="content"}
+<!--城市分站-->
+<div class="headcity">
+
+
+
+
+   
+
+<!-- 工具 begin -->
+<div class="parkadd">
+    <div class="paddress">
+   <a class="section" href="{:url('index/index')}"> 首页</a>&gt;
+    {volist name="crumbs" id="vo"}
+    <a class="section" href="{$vo.url}"> {$vo.title}</a>&gt; 
+    {/volist}
+  </div>
+
+</div>
+<!-- 工具 end 
+<div class="area blank10"></div>-->
+<div class="area blank10"></div>
+  
+<div class="area blank10"></div>
+<!-- factory begin -->
+<div class="park_list">
+<!-- factory info left-begin -->
+<div class="park_list">
+
+<div class="park_rank">
+	<!--one rank-begin-->
+	
+	{volist name="list.data" id="vo"}
+	<dl class="parkRank_main">
+    	<dt class="parkRank_img">
+    	<a href="/index.php/investmentpark/{$vo.id}">
+    	<img src="__UPLOAD__/{$vo.logo.path}" width="267" height="180"></a></dt>
+        <dd class="parkRank_info">
+        	<div class="rank_title">
+            <a href="/index.php/investmentpark/{$vo.id}">{$vo.title}</a></div>
+            <div class="rank_p"><span class="padR-10">园区类别：</span>{:getCateType($vo.category)}</div>
+            <div class="rank_p"><span class="padR-10">园区级别：</span>{$vo.level}</div>
+			<div class="rank_p"><span class="padR-10">园区地址：</span>{:area($vo.province)}>{:area($vo.city)}>{:area($vo.district)}>{$vo.address}</div>
+            <div class="rank_p"><span class="padR-10">招商单位：</span>{$title}</div>
+			<div class="rank_p">
+            
+            <span class="padR-10">关注度：</span>
+         
+            <i class="width110">
+           
+            <span class="fc_red">{$vo.hits}</span>&nbsp;</i> 
+            
+            {:date('Y-m-d',$vo.create_time)}</div>
+        </dd>
+        <div class="clear"></div>
+    </dl>
+    {/volist}
+
+</div>
+<!-- one factinfoimg end -->
+ <div class="clear"></div>
+<!--page-->
+
+    {$page|raw}
+
+<!--page--> 
+<div class="area blank10"></div>
+<div class="area blank10"></div>
+      
+	</div>
+
+</div>
+
+</div>
+
+<!-- new factory-end -->
+
+<!-- factory-info right-end -->
+
+<!-- factory end -->
+
+    <div class="area blank10"></div>
+
+<!-- 版权页开始 -->
+<!-- 版权页开始 -->
+
+{/block}

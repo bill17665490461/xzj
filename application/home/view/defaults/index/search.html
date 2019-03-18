@@ -1,0 +1,92 @@
+{extend name="defaults/layout"/}
+{block name="content"}
+<!--城市分站-->
+<div class="headcity">
+
+<!--第一屏内容开始-->
+<div class="news_list">
+<!--左侧列表开始-->
+     <div class="Ltcon">
+<!--面包屑begin-->
+   <div class="NSadd">
+    <a class="section" href="{:url('index/index')}"> 首页</a>&gt;
+        {volist name="crumbs" id="vo"}
+        <i class="right chevron icon divider"></i><a class="section" href="{$vo.url}"> {$vo.title}</a>&gt;
+        {/volist}
+    </div>
+<!--面包屑end-->
+		<!--one con begin-->
+	    {if !empty($searchList.investmentpark)}
+
+        {volist name="$searchList.investmentpark" id="vo"}
+	  	<div class="list_con" style="padding: 5px 0px">
+	       <div class="list_tit">
+	       <a href="/index.php/{$vo.cname}/{$vo.id}">{$vo.title}</a>
+	       <span style="font-weight: 100;float: right">{:date('Y-m-d H:i:s',$vo.create_time)}</span></div>
+		   
+	    </div>
+	    {/volist}
+	    {else /}
+	    <br />
+	  		不好意思，没有您查询的园区。
+	    {/if}
+	</div>
+<!--左侧列表结束-->
+<!--列表right begin-->
+
+<div class="inspright f_r">
+<div class="inspR_rank">
+	<div class="blank10"></div>
+	<div class="blank10"></div>
+	<div class="blank10"></div>
+	<h4 class="sdtit"><span>
+	<img src="__STATIC__/home/image/rmtzxm.jpg"></span>相关政府招商</h4>
+            
+    <ul class="inspRlink">
+    	{if !empty($searchList.government)}
+    	{volist name="$searchList.government" id="vo"}
+		<li onmouseover="this.style.backgroundColor=&#39;#f1f1f1&#39;" onmouseout="this.style.backgroundColor=&#39;#ffffff&#39;" style="background-color: rgb(255, 255, 255);">
+		
+		<a href="/index.php/{$vo.cname}/{$vo.id}" title="{$vo.title}">
+		<span class="num top3" style="color: red">{$vo.id}</span>
+		<span class="tit">{$vo.title}</span>
+		</a>
+		</li>
+	    {/volist}
+	    {else /}
+	    	没有相关的政府项目
+	    {/if}
+    </ul>
+    <div class="blank10"></div>
+	<div class="blank10"></div>
+	<div class="blank10"></div>
+	<h4 class="sdtit"><span>
+	<img src="__STATIC__/home/image/rmtzxm.jpg"></span>相关招商峰会</h4>
+            
+    <ul class="inspRlink">
+    	{if !empty($searchList.articles)}
+    	{volist name="$searchList.articles" id="vo"}
+		<li onmouseover="this.style.backgroundColor=&#39;#f1f1f1&#39;" onmouseout="this.style.backgroundColor=&#39;#ffffff&#39;" style="background-color: rgb(255, 255, 255);">
+		
+		<a href="/index.php/{$vo.cname}/{$vo.id}" title="{$vo.title}">
+		<span class="num top3" style="color: red">{$vo.id}</span>
+		<span class="tit">{$vo.title}</span>
+		</a>
+		</li>
+	    {/volist}
+	    {else /}
+	    	没有相关招商峰会
+	    {/if}
+    </ul>
+</div>
+</div>
+<!--即时新闻end-->
+<div class="blank10"></div>
+
+
+<!--newstop10 end-->
+</div>
+<!--列表right end-->
+</div>
+
+{/block}

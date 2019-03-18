@@ -1,0 +1,62 @@
+{extend name="layout"/}
+{block name="content"}
+    <div class="">
+    <div class="member_base">
+	    <div class="account">我的账户</div>
+		<div class="my_account">
+		   <ul>
+		      <li>
+			    <div class="my_nav">账 号：</div>
+				<div class="my_xinxi">{$username}</div>
+			  </li>
+			  <li>
+			    <div class="my_nav">注册时间：</div>
+				<div class="my_xinxi">2018-08-22 16:27:20</div>
+			  </li>
+		   </ul>
+		</div>
+	</div>
+
+	<div class="my_message">
+	   <div class="my_messtit">发布信息统计</div>
+	   <ul>
+	     <li>
+		    <div class="mess_t">项目</div>
+			<div class="mess_tsh">已审核</div>
+			<div class="mess_twsh">未审核</div>
+		 </li>
+		 <li>
+		    <div class="mess_t">园区招商：</div>
+			<div class="mess_tsh">0</div>
+			<div class="mess_twsh">1</div>
+			<div class="mess_tpast">1</div>
+		 </li>
+		 <li>
+		    <div class="mess_t">厂房仓库：</div>
+			<div class="mess_tsh">0</div>
+			<div class="mess_twsh">0</div>
+			<div class="mess_tpast">0</div>
+		 </li>
+		 <li>
+		    <div class="mess_t">工地供应：</div>
+			<div class="mess_tsh">0</div>
+			<div class="mess_twsh">0</div>
+			<div class="mess_tpast">0</div>
+		 </li>
+		 <li>
+		    <div class="mess_t">需求信息：</div>
+			<div class="mess_tsh">0</div>
+			<div class="mess_twsh">0</div>
+			<div class="mess_tpast">0</div>
+		 </li>
+		 <li class="none">
+		    <div class="mess_t">总计：</div>
+			<div class="mess_tsh">0</div>
+			<div class="mess_twsh">1</div>
+			<div class="mess_tpast">1</div>
+		 </li>
+	   </ul>
+	</div>
+</div>
+{/block}
+<script type="text/javascript" src="__STATIC__/member/files/jquery-1.js"></script>

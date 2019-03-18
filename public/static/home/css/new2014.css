@@ -1,0 +1,185 @@
+@charset "utf-8";
+/* CSS Document */
+/*顶部搜索*/
+.NTsearch{margin:0 auto; width:1200px;overflow:hidden;}
+.NTsearch .logo{margin:0 auto; overflow:hidden;width:280px;float:left; height:60px; text-align:left;overflow:hidden;}
+.NTsearch .logo{background:url(../images/newslogo.gif) left 5px no-repeat;}
+.NTsearch .logo a{display:block;height:60px; width:280px;}
+.NTsearch .infoadd{margin:0 auto;overflow:hidden; width:360px; float:left; height:60px; padding-left:15px; line-height:60px; text-align:left;}
+.NTsearch .city{margin:0 auto;overflow:hidden; width:160px; float:left; height:60px;}
+.NTsearch .city .cname{ width:160px; clear:both; line-height:22px;}
+.NTsearch .city .cname2{ width:160px;line-height:22px;}
+.NTsearch .city .cname2 a{height:22px; padding:0px 6px; line-height:22px; border:1px solid #e2e2e2; font-size:12px; font-weight:100;display:inline-block;cursor: pointer;}
+/*** 切换其它城市 ***/
+.NTsearch .city .cname2 .sidenavchild {background:#fff;border:solid 2px #dedede;padding:15px;width:400px; position:absolute;z-index:10000;color:#CCCCCC; text-align:left;overflow:hidden;}
+.NTsearch .city .cname2 .sidenavchild a{color:#000; padding:0;display:inline-block; height:30px; line-height:30px;width:45px; text-align:center;border:none;}
+.NTsearch .city .cname2 .sidenavchild a:hover{color:#fff; background-color:#bb1122;}
+.NTsearch .city .cname2 .sidenavchild img.gb{float:right;margin-right:0px;margin-top:0px;_margin-top:0px; cursor:pointer;border:solid 1px #eee;width:16px;height:16px;display:inline-block;background:#fff;}
+.NTsearch .city .cname2 .sidenavchild img.gb:hover{background:#eee;border:solid 1px #ddd;}
+/*面包屑*/
+.NSadd{margin:0 auto; text-align:left; height:40px; line-height:40px; font-size:13px;border-bottom:1px dashed #999999;}
+/*search*/
+.NTsearch .sitesearch{margin:0 auto; float:right; width:500px; height:60px;overflow:hidden;}
+.NTsearch .sitesearch .alStit{width:500px;overflow:hidden; text-align:center; padding:0; float:left; margin:10px 0px 0px 0px;}
+
+.NTsearch .sitesearch .alScont{width:500px; margin:0px auto; overflow:hidden;}
+.NTsearch .sitesearch .alScont .input2{float: left;width:390px;text-indent: 10px;height: 36px;line-height:36px;vertical-align: bottom;border:3px solid #bb1122;font-size: 14px;color: #888;font-size: 14px;outline: none;}
+.NTsearch .sitesearch .alScont .btnSearch{ background: #bb1122 url(../images/web_bg/sbutton.gif) no-repeat top left; border: 0 none; color: #FFFFFF; cursor: pointer; float: left; font-size: 16px; height: 42px; text-indent: -9999px;width: 92px; vertical-align: middle; white-space: nowrap;}
+
+/* 工具 */
+.newstool{width: auto;overflow:hidden;min-width: 1200px;height:54px;padding:0;border-top:4px solid #bb1122;}
+.newstool2{width: auto;overflow:hidden;min-width: 1200px;height:10px;padding:0;border-top:4px solid #bb1122;}
+.newstoolnr{width:1200px;overflow:hidden;height:38px; margin:0 auto; line-height:36px; font-size:15px;}
+.newstoolnr .td{float:left;overflow:hidden;width:99px;height:36px;border-right:1px solid #ddd;border-bottom:1px solid #ddd;}
+.newstoolnr .td:hover{ background:#bb1122; color:#FFFFFF;}
+.newstoolnr .td:hover a{color:#FFFFFF;}
+.newstoolnr .w98{width:98px;float:left;height:36px;border-left:1px solid #ddd;border-right:1px solid #ddd;border-bottom:1px solid #ddd;}
+.newstoolnr .w98:hover{ background:#bb1122; color:#FFFFFF;}
+.newstoolnr .w98:hover a{color:#FFFFFF;}
+.newstoolnr .td.nob{border-left:1px solid #ddd;border-right:1px solid #ddd;border-bottom:1px solid #ddd;}
+.newstoolnr .s1{background:#bb1122; color:#FFFFFF;}
+.newstoolnr .s1 a{color:#FFFFFF;}
+.newstoolnr .td .s2{height:20px;line-height:20px;font-size:14px;margin-top:4px;float: left; margin-left: 10px;}
+.newstoolnr .td .s2 a{margin-right:10px; text-align:left; display:inline-block;}
+
+/*焦点图文部分*/
+.First1{margin:0 auto;overflow:hidden; width:1200px; overflow:hidden;}
+.First1 .tuwen{margin: 0 auto;overflow:hidden; width:430px; float:left;}
+.First1 .tuwen .letcon{margin:0 auto;overflow:hidden; width:430px; float:left; text-align:left;}
+.First1 .tuwen .letcon .Bit{margin:0 auto;overflow:hidden; width:430px; font-size:18px; font-weight:bold; line-height:42px; height:42px;}
+.First1 .tuwen .letcon .in_News{margin:0 auto;overflow:hidden; width:430px; font-size:16px;}
+.First1 .tuwen .letcon .in_News ul {margin: 0;padding: 0;width: 430px;}
+.First1 .tuwen .letcon .in_News ul li {background: url(../images/web_bg/cDotted2.gif) no-repeat 0px 13px;padding: 0 0px 0 15px;}
+.First1 .tuwen .letcon .in_News ul li {overflow: hidden;white-space: nowrap;height:32px;line-height:32px;}
+.First1 .retcon{margin:0 auto; width:750px; float:right;}
+/*焦点图*/
+.First1 .retcon .Focus-one{margin:0 auto; width:750px;overflow:hidden;}
+/*首页图片滚动*/
+.hdwrap {width:750px;margin:0 auto;overflow:hidden;}
+.flashlist {height:360px;overflow:hidden;}
+.flashlist .f_out {height:360px;overflow:hidden;position:relative;z-index:50;}
+.flashlist .f_out img{height:360px; width:750px;}
+.flashlist .f_out .picintro {height:84px;background:#333333;position:absolute;bottom:0;left:0;width:730px;z-index:60;padding:0 10px; text-align:left;overflow:hidden;}
+.picintro h2 a {color:#FFF;font-size:20px;font-weight:bold;line-height:37px;}
+.picintro p {color:#767676;line-height:20px;}
+.picintro p a {	color:#abadac;}
+.flash_tab {height:26px;background:url(../images/web_bg/hdbg.gif) no-repeat scroll 0 0;padding-top:19px;}
+.flash_tab .tabs {width:200px;height:8px;overflow:hidden;margin:auto;}
+.flash_tab .tabs ul li {width:33px;height:8px;float:left;display:block;}
+.flash_tab .tabs ul li.opdiv,.noopdiv {	padding:0;opacity:1}
+.flash_tab .tabs ul li.opdiv a {width:21px;height:8px;	background:url(../images/web_bg/hdsmall.gif) no-repeat scroll -41px -0px;display:block;}
+.flash_tab .tabs ul li.opdiv a:hover {background-position:-8px -0px;}
+.flash_tab .tabs ul li.noopdiv a {width:21px;height:8px;background:url(../images/web_bg/hdsmall.gif) no-repeat scroll -8px -0px;display:block;}
+/*big-menu样式*/
+.Menutool{margin:0 auto; width:1200px;overflow:hidden;}
+.Menutool .toolleft{margin:0 auto;overflow:hidden; width:590px;border-top:3px solid #bb1122; float:left;}
+.Mtool{margin:0 auto;overflow:hidden; width:590px; height:45px; line-height:36px; font-size:15px; text-align:left;}
+.Mtool a{padding:0 10px 0 10px;height:36px;display:inline-block;}
+.Mtool_l{float:left; margin:0 auto; width:370px; text-align:left;}
+.Mtool_r{float:right; width:200px;}
+.Menutool .toolright{margin:0 auto;overflow:hidden; width:590px;border-top:3px solid #333333; float:right;}
+.newslist{margin:0 auto;overflow:hidden; width:370px;}
+.newslist ul {margin: 0;overflow:hidden; width: 370px; font-size:15px; text-align:left; padding-bottom:15px;}
+.newslist ul li {background: url(../images/web_bg/cDotted2.gif) no-repeat 0px 13px;padding: 0 0px 0 15px;}
+.newslist ul li {overflow: hidden;white-space: nowrap;height: 30px;line-height: 30px;}
+
+.Mtool_r .newstu{width:200px;overflow:hidden;}
+.Mtool_r .newstu .Npicture{width:200px;overflow:hidden;} 
+.Mtool_r .newstu .Npicture img{width:200px;overflow:hidden; height:133px;}
+.Mtool_r .newstu .Npicture img{ transition: all .3s ease;-webkit-transition: all .3s ease;-moz-transition: all .3s ease;-ms-transition: all .3s ease;-o-transition: all .3s ease; } 
+.Mtool_r .newstu .Npicture img:hover { transform:scale(1.04,1.04);-ms-transform:scale(1.04,1.04);-o-transform:scale(1.04,1.04); -webkit-transform:scale(1.04,1.04); }
+.Mtool_r .newstu .Ncharacter{padding:5px 0; text-align:left; width:200px; height:50px; line-height:22px; font-size:13px;}
+
+/*菜单样式*/
+.Menupark .Menured{margin:0 auto;overflow:hidden; float:left; height:46px;background: url(../images/web_bg/Mred.gif) repeat-x 0px 0px; font-size:24px; line-height:42px; color:#333333; padding:0 10px 0 10px;}
+.Menupark .Menured-right{ float:right;overflow:hidden; height:46px; color:#666666; text-align:right;}
+.Menupark .Menured-right .Plink{ margin-top:14px; padding:0 10px 0 10px; font-size:14px; line-height:24px; text-align:right; font-weight:bold;}
+.Menupark .Menured-right .Plink a{padding:0 10px 0 10px;height:24px;line-height:24px; display:inline-block;}
+.Menupark .Menured-right .Plink a:hover{ color:#FFFFFF; background:#ba2636; text-align:center;}
+/*---------------------------------newslist------------------------------*/
+/*列表样式*/
+.news_list{margin:0 auto; width:1200px;overflow:hidden;}
+.news_list .Ltcon{float:left; width:760px;overflow:hidden;}
+.list_con{width:760px; text-align:left;overflow:hidden; border-bottom:1px dashed #999999; padding:15px 0 15px 0;}
+.list_con .list_tit{width:760px;overflow:hidden; font-size:16px; line-height:40px; height:40px; font-weight:bold;}
+.list_con .list_pic{width:190px;overflow:hidden; float:left;}
+.list_con .list_pic img{width:180px;overflow:hidden; height:120px;}
+.list_con .list_Introduction{width:760px;overflow:hidden; font-size:14px; line-height:28px;}
+.list_con .list_time{width:760px;overflow:hidden; line-height:28px; color:#999999;height:28px;}
+.list_con .list_Introduction2{width:570px;overflow:hidden; font-size:14px; line-height:28px;float:left;}
+.list_con .list_time2{width:570px;overflow:hidden; line-height:28px; color:#999999;float:left;height:28px;}
+.news_list .Rtcon{float:right;overflow:hidden; width:400px; margin-top:41px;}
+/*一周新闻排行榜*/
+.newstop10{width:400px;overflow:hidden; text-align:left;}
+.newstop10 .phtit{height:40px;overflow:hidden;font-size:16px; line-height:40px; border-bottom:3px solid #cc0000; font-weight:bold;}
+.ul04{width:400px;overflow: hidden;}
+.ul04 li{float:left;width:400px;height:40px; line-height:40px;overflow: hidden; *zoom: 1;border-top:1px dotted #d3d3d3;cursor:pointer;font-size:14px; margin-top:-1px;padding:0;}
+.ul04 li a{ display:block;cursor:pointer; text-decoration:none;}
+.ul04 li a:hover{ cursor:pointer;text-decoration:none;}
+.ul04 li a:hover span.rta{ color:#c00;}
+.ul04 li .num{ float: left; margin-right:10px; width:16px; height: 16px; line-height: 16px; background:url(../images/web_bg/TOP.gif) 0 -16px no-repeat; text-align:center; color:#fff;margin-top:13px;}
+.ul04 li .top3{float: left; margin-right:10px; width:16px; height: 16px; line-height: 16px; background:url(../images/web_bg/TOP.gif) 0 -0px no-repeat; text-align:center; color:#fff;margin-top:13px;}
+.ul04 li .tit{ float: left;width:300px; white-space:nowrap; overflow: hidden; text-overflow:ellipsis;}
+.ul04 li .rta{ float: right;width:70px;color:#999; text-align:right;}
+/*即时新闻*/
+.news-top10{width:400px;overflow:hidden; text-align:left;}
+.news-top10 .forthtit{height:40px;font-size:16px;overflow:hidden; line-height:40px; border-top:3px solid #666; font-weight:bold;}
+.news-top10 .listtop{margin:0 auto; width:400px;overflow:hidden;}
+.news-top10 .listtop ul {margin: 0;width: 400px; font-size:14px; text-align:left; padding-bottom:10px;}
+.news-top10 .listtop ul li {background: url(../images/web_bg/cDotted2.gif) no-repeat 0px 13px;padding: 0 0px 0 15px;}
+.news-top10 .listtop ul li {overflow: hidden;white-space: nowrap;height: 30px;line-height: 30px;text-overflow:ellipsis;}
+/*图片新闻*/
+.picnews{width:400pxoverflow:hidden;;}
+.picnews .phtit{height:40px;font-size:16px; line-height:40px; border-bottom:3px solid #cc0000;text-align:left; font-weight:bold;overflow:hidden;}
+.piccon{ width:200px; float:left;overflow:hidden; text-align:center; height:175px; margin-top:15px;}
+.piccon .imgcon{ width:200px; text-align:center;}
+.piccon .imgcon img{width:180px; height:120px;}
+.piccon .imgcon p{ width:180px; line-height:22px; text-align:left; height:44px; padding-top:10px; font-size:14px; text-align:left; overflow:hidden; margin: 0 auto;}
+/*广告样式*/
+.AD400{margin:0 auto; width:400px;overflow:hidden;}
+.AD760{margin:0 auto; width:760px;overflow:hidden;}
+/*----------------info--------------------*/
+.con_tent{margin: 0px auto;overflow:hidden;width: 760px;overflow: hidden;text-align: left;}
+.con_tent .news_tit{text-align:left;padding: 10px 0px 10px 0px;overflow:hidden; }
+.con_tent .news_tit h1 {color:#333333;font-size: 26px;font-weight: normal;line-height: 45px;}
+.news_author{margin: 0 auto;font-size: 14px;height: 36px;text-align:left;text-decoration: none;line-height: 36px;word-spacing: normal;letter-spacing: normal;border-bottom: 1px dashed #999999; padding-bottom:15px; color:#666666;}
+.news_author span{ padding-right: 20px;}
+.news_abstract {margin: 0 auto;line-height: 24px;word-spacing: normal;letter-spacing: normal;text-align: left;padding:20px 0px;font-size: 14px; color:#444;overflow:hidden;}
+#news_body{margin: 0 auto;font-size: 16px;text-decoration: none;line-height: 28px;letter-spacing: 0px;text-indent: 2em;word-spacing: normal;text-align: left;overflow:hidden;}
+#news_body A {COLOR: #0033FF; text-decoration:underline;}
+#news_body A:visited {COLOR: #0033FF; text-decoration:underline;}
+#news_body A:hover {COLOR: #ba2636; text-decoration:underline;}
+#news_body img{ border:2px solid #d8d8d8;}
+#news_body img {behavior: url("http://www.cnrepark.com/js/imgzoom.htc");}
+#news_body p{ padding:10px 0;}
+/*新闻翻页样式*/
+.pagecotent{text-align:center;height:45px; line-height:36px;padding:0; font-size:14px; margin-top:20px;overflow:hidden;}
+.pagecotent a, .pagecotent .noclick{ border:1px solid #d9d9d9; margin:0 5px;display: inline-block; height:36px; padding:0px 15px;}
+.pagecotent a,.pagecotent a:visited{color:#111111;}
+.pagecotent a:hover{background-color:#bb1122; color:#FFFFFF;}
+.pagecotent .noclick{ font-weight:bold; color:#ffffff; background-color:#bb1122;}
+.pagecotent .noclick:visited {background-color:#1E3986; color:#FFFFFF;}
+.pagecotent .noclick:link {background-color:#bb1122; color:#FFFFFF;}
+.pagecotent .noclick:hover {background-color:#bb1122; color:#FFFFFF;}
+
+.shareeditor {line-height: 20px;border-top:1px solid #999999; padding:20px 0 10px 0; margin-top:20px;width:100%;overflow:hidden;}
+#bdshare {_overflow-x: hidden;z-index: 999999;padding-bottom: 2px;font-size: 12px;float: left;text-align: left!important;zoom: 1;}
+.editor {float: right;line-height: 22px;}
+/*相关news*/
+.about_news{margin:0 auto; width:760px;overflow:hidden;}
+.about_news .abouttit{width:760px; font-size:16px; font-weight:bold; border-bottom:3px solid #343434; text-align:left; height:40px; line-height:40px;overflow:hidden;}
+.about_news .abouttit span{ padding-left:0px;}
+.about_news .abouttit span a{color:#FF0000;}
+.about_news .aboutnew{margin:0 auto; width:760px;overflow:hidden;}
+.about_news .aboutnew ul {margin: 0;width: 760px; font-size:16px; text-align:left; padding:15px 0;}
+.about_news .aboutnew ul li {background: url(../images/web_bg/cDotted2.gif) no-repeat 0px 13px;padding: 0 0px 0 15px; width:365px; float:left;}
+.about_news .aboutnew ul li {white-space:nowrap; overflow: hidden; text-overflow:ellipsis;height: 30px;line-height: 30px;}
+/*推荐新闻*/
+.recommend{margin:0 auto;width:760px; margin-top:10px;overflow:hidden;}
+.recommend .recommendtit{width:760px; font-size:16px; font-weight:bold; border-bottom:3px solid #343434; text-align:left; height:40px; line-height:40px;overflow:hidden;}
+.recommend .recommendtit span{}
+.recommend .recommendnew{margin:0 auto; width:760px; padding:15px 0;overflow:hidden;}
+.recommend .recommendnew .recommendpic{margin:0 auto; width:253px; float:left;overflow:hidden;}
+.recommend .recommendnew .recommendpic img{width:240px; height:160px;overflow:hidden;}
+.recommend .recommendnew .recommendpic a{cursor:pointer;}
+.recommend .recommendnew .recommendpic p{width:240px; height:45px; padding:8px 0; line-height:20px; font-size:14px;}
